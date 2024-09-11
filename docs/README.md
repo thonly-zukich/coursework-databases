@@ -7,7 +7,7 @@ footer: "ECL 2.0 Licensed | Copyright © 2024 Yurii Platunov"
 ---
 
 
-**Виконав(-ла):** 
+**Виконали:** 
 
 *студент 2-го курсу, групи ІМ-33*<span padding-right:5em></span> **Ярослав БОНДАР [Пошта: yaroslawx@gmail.com, [Telegram](https://t.me/Adaptolo9)]**  
 *студент 2-го курсу, групи ІМ-33*<span padding-right:5em></span> **Владислав ВОЙТКІВ [Пошта: vladvoytkiv321@gmail.com, [Telegram](https://t.me/alomv1)]**  
