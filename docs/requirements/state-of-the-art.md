@@ -215,8 +215,9 @@
         </tr>
         <!-- new requirement -->
         <tr>
-    <td class="Вимоги" rowspan=5>Usability (зручність роботи)</td>
-    <td class="Критерії">User-friendly interface</td>
+ <tr>
+    <td class="Вимоги" rowspan=5><strong>Usability (зручність роботи)</strong></td>
+    <td class="Критерії"><strong>User-friendly interface</strong></td>
     <td class="SigmaTasking (Наш Проєкт)">&#10004;</td>
     <td class="GitHub Projects">&#10004;</td>
     <td class="Notion">&#10004;</td>
@@ -228,7 +229,7 @@
     <td class="Click Up">&#10004;</td>
 </tr>
 <tr>
-    <td class="criteria">Багатомовність</td>
+    <td class="criteria"><strong>Багатомовність</strong></td>
     <td class="SigmaTasking (Наш Проєкт)">&#10004;</td>
     <td class="GitHub Projects">&#10008;</td>
     <td class="Notion">&#10004;</td>
@@ -240,7 +241,7 @@
     <td class="Click Up">&#10004;</td>
 </tr>
 <tr>
-    <td class="criteria">Інтеграція з Github</td>
+    <td class="criteria"><strong>Інтеграція з Github</strong></td>
     <td class="SigmaTasking (Наш Проєкт)">&#10004;</td>
     <td class="GitHub Projects">&#10004;</td>
     <td class="Notion">&#10004;</td>
@@ -252,7 +253,7 @@
     <td class="Click Up">&#10004;</td>
 </tr>
 <tr>
-    <td class="criteria">Ведення паралельно кількох проєктів</td>
+    <td class="criteria"><strong>Ведення паралельно кількох проєктів</strong></td>
     <td class="SigmaTasking (Наш Проєкт)">&#10004;</td>
     <td class="GitHub Projects">&#10008;</td>
     <td class="Notion">&#10004;</td>
@@ -264,7 +265,7 @@
     <td class="Click Up">&#10008;</td>
 </tr>
 <tr>
-    <td class="criteria">Доступ до дошки без реєстрації</td>
+    <td class="criteria"><strong>Доступ до дошки без реєстрації</strong></td>
     <td class="SigmaTasking (Наш Проєкт)">&#10008;</td>
     <td class="GitHub Projects">&#10008;</td>
     <td class="Notion">&#10008;</td>
@@ -275,10 +276,10 @@
     <td class="Microsoft Project">&#10008;</td>
     <td class="Click Up">&#10004;</td>
 </tr>
-      
+
 <tr>
-    <td class="requirements" rowspan=6>Reliability (надійність)</td>
-    <td class="criteria">Резервне копіювання</td>
+    <td class="requirements" rowspan=6><strong>Reliability (надійність)</strong></td>
+    <td class="criteria"><strong>Резервне копіювання</strong></td>
     <td class="our-project">&#10004;</td>
     <td class="project-1">&#10004;</td>
     <td class="project-2">&#10004;</td>
@@ -290,7 +291,7 @@
     <td class="project-8">&#10004;</td>
 </tr>
 <tr>
-    <td class="criteria">Швидкість виправлення багів</td>
+    <td class="criteria"><strong>Швидкість виправлення багів</strong></td>
     <td class="our-project">&#10004;</td>
     <td class="project-1">&#10004;</td>
     <td class="project-2">&#10004;</td>
@@ -302,7 +303,7 @@
     <td class="project-8">&#10004;</td>
 </tr>
 <tr>
-    <td class="criteria">Приватні проєкти</td>
+    <td class="criteria"><strong>Приватні проєкти</strong></td>
     <td class="our-project">&#10004;</td>
     <td class="project-1">&#10004;</td>
     <td class="project-2">&#10004;</td>
@@ -314,7 +315,7 @@
     <td class="project-8">&#10004;</td>
 </tr>
 <tr>
-    <td class="criteria">Історія зміни проєктів</td>
+    <td class="criteria"><strong>Історія зміни проєктів</strong></td>
     <td class="our-project">&#10004;</td>
     <td class="project-1">&#10004;</td>
     <td class="project-2">&#10004;</td>
@@ -326,7 +327,7 @@
     <td class="project-8">&#10004;</td>
 </tr>
 <tr>
-    <td class="criteria">Протокол шифрування</td>
+    <td class="criteria"><strong>Протокол шифрування</strong></td>
     <td class="our-project">TLS</td>
     <td class="project-1">TLS</td>
     <td class="project-2">TLS</td>
@@ -338,7 +339,7 @@
     <td class="project-8">TLS</td>
 </tr>
 <tr>
-    <td class="criteria">Багаторівнева автентифікація</td>
+    <td class="criteria"><strong>Багаторівнева автентифікація</strong></td>
     <td class="our-project">&#10004;</td>
     <td class="project-1">&#10004;</td>
     <td class="project-2">&#10004;</td>
