@@ -66,21 +66,123 @@
 
 *Дається опис бізнес-сценаріїв взаємодії бізнес-акторів, робітників і, можливо, інформаційної системи за допомогою наступної
 специфікації:*
-
    
-***ID:***
-    
-***НАЗВА:***
-    
-***УЧАСНИКИ:***
+<table style="border: 1px solid black; border-collapse: collapse;">
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">ID</th>
+    <td style="border: 1px solid black; padding: 8px;">CreateBoard</td>
+  </tr>
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">Назва</th>
+    <td style="border: 1px solid black; padding: 8px;">Створити дошку (Create Board)</td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Учасники</th>
+    <td style="border: 1px solid black; padding: 8px;">Користувач (тимлід або розробник), система</td>
+  </tr>
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">Передумови</th>
+    <td style="border: 1px solid black; padding: 8px;">Користувач зареєстрований та авторизований у системі</td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Результат</th>
+    <td style="border: 1px solid black; padding: 8px;">Нова дошка створена та доступна для користування</td>
+  </tr>
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">Виключні ситуації</th>
+    <td style="border: 1px solid black; padding: 8px;">Користувач не ввів назву дошки (NullInstanceException), недопустима назва (InvalidBoardNameException)</td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Основний сценарій</th>
+    <td style="border: 1px solid black; padding: 8px;">
+      <ol>
+        <li>Користувач натискає кнопку "Створити дошку"</li>
+        <li>Користувач вводить назву дошки (можливе NullInstanceException)</li>
+        <li>Система перевіряє введені дані (можливе InvalidBoardNameException)</li>
+        <li>Система створює нову дошку</li>
+        <li>Користувач отримує доступ до дошки</li>
+      </ol>
+    </td>
+  </tr>
+</table>
 
-***ПЕРЕДУМОВИ:***
+<table style="border: 1px solid black; border-collapse: collapse;">
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">ID</th>
+    <td style="border: 1px solid black; padding: 8px;">EditBoard</td>
+  </tr>
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">Назва</th>
+    <td style="border: 1px solid black; padding: 8px;">Редагувати дошку (Edit Board)</td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Учасники</th>
+    <td style="border: 1px solid black; padding: 8px;">Користувач (тимлід або розробник), система</td>
+  </tr>
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">Передумови</th>
+    <td style="border: 1px solid black; padding: 8px;">Користувач має права на редагування дошки</td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Результат</th>
+    <td style="border: 1px solid black; padding: 8px;">Зміни збережені</td>
+  </tr>
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">Виключні ситуації</th>
+    <td style="border: 1px solid black; padding: 8px;">Дошка не знайдена (BoardNotFoundException), відсутні права на редагування (AccessDeniedException)</td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Основний сценарій</th>
+    <td style="border: 1px solid black; padding: 8px;">
+      <ol>
+        <li>Користувач відкриває дошку</li>
+        <li>Користувач натискає кнопку "Редагувати"</li>
+        <li>Користувач вносить зміни в дошку</li>
+        <li>Система перевіряє права на редагування (можливе AccessDeniedException)</li>
+        <li>Система зберігає зміни</li>
+      </ol>
+    </td>
+  </tr>
+</table>
 
-***РЕЗУЛЬТАТ:***
-
-***ВИКЛЮЧНІ СИТУАЦІЇ:***
-
-***ОСНОВНИЙ СЦЕНАРІЙ:***
+<table style="border: 1px solid black; border-collapse: collapse;">
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">ID</th>
+    <td style="border: 1px solid black; padding: 8px;">DeleteBoard</td>
+  </tr>
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">Назва</th>
+    <td style="border: 1px solid black; padding: 8px;">Видалити дошку (Delete Board)</td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Учасники</th>
+    <td style="border: 1px solid black; padding: 8px;">Користувач (тимлід або розробник), система</td>
+  </tr>
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">Передумови</th>
+    <td style="border: 1px solid black; padding: 8px;">Користувач має права на видалення дошки</td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Результат</th>
+    <td style="border: 1px solid black; padding: 8px;">Дошка видалена</td>
+  </tr>
+  <tr style="background-color: #d4f7dc;">
+    <th style="border: 1px solid black; padding: 8px;">Виключні ситуації</th>
+    <td style="border: 1px solid black; padding: 8px;">Дошка не знайдена (BoardNotFoundException), відсутні права на видалення (AccessDeniedException)</td>
+  </tr>
+  <tr>
+    <th style="border: 1px solid black; padding: 8px;">Основний сценарій</th>
+    <td style="border: 1px solid black; padding: 8px;">
+      <ol>
+        <li>Користувач відкриває дошку</li>
+        <li>Користувач натискає кнопку "Видалити"</li>
+        <li>Система перевіряє права на видалення (можливе AccessDeniedException)</li>
+        <li>Система видаляє дошку</li>
+        <li>Користувач отримує підтвердження про успішне видалення</li>
+      </ol>
+    </td>
+  </tr>
+</table>
 
 *Кількість сценаріїв визначається у відповідності до специфіки завдання та необхідного 
 рівня деталізації (зазвичай, 5-6 сценаріїв).*
@@ -117,7 +219,12 @@
 
 ## Продуктивність
 
-*[Performance (вимоги до продуктивності)]*
+- Висока швидкість передачі даних між компонентами системи.
+- Оптимізоване використання оперативної пам'яті та інтернет-ресурсів.
+- Використання хмарних технологій для збільшення продуктивності.
+- Підтримка багатопотокової обробки даних для підвищення ефективності.
+- Гнучка настройка ресурсів для кожного окремого проекту.
+- Підвищена пропускна здатність системи для обробки великих обсягів даних.
 
 ## Експлуатаційна придатність
 
