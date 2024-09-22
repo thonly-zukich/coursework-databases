@@ -67,8 +67,8 @@
         <li>Замовник бачить продукт лише після завершення розробки</li>
         <li>Велика кількість документації збільшує час на узгодження</li>
     </ul> 
-    <p><img src="https://www.leadertask.ru/_next/image?url=https%3A%2F%2Fwww.leadertask.ru%2Fwp-content%2Fuploads%2F2023%2F03%2Fwaterfall.jpg&w=828&q=75"></p>
-    <p><a href="https://www.leadertask.ru/_next/image?url=https%3A%2F%2Fwww.leadertask.ru%2Fwp-content%2Fuploads%2F2023%2F03%2Fwaterfall.jpg&w=828&q=75">посилання на схему</a></p>
+    <p><img src="https://itexpert.work/wp-content/webp-express/webp-images/uploads/2022/06/kaskadna-model.jpg.webp" width="600px"></p>
+    <p><a href="https://images.app.goo.gl/K6vdCS7QUMwftzabA">посилання на схему</a></p>
     
       
 
