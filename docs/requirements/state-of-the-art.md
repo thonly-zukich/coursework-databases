@@ -113,15 +113,15 @@
         <tr>
             <th class="requirements">Вимоги</th>
             <th class="criteria">Критерії</th>
-            <th class="our-project">Наш проєкт</th>
-            <th class="project-1">Проєкт 1</th>
-            <th class="project-2">Проєкт 2</th>
-            <th class="project-3">Проєкт 3</th>
-            <th class="project-4">Проєкт 4</th>
-            <th class="project-5">Проєкт 5</th>
-            <th class="project-6">Проєкт 6</th>
-            <th class="project-7">Проєкт 7</th>
-            <th class="project-8">Проєкт 8</th> 
+            <th class="our-project">SigmaTasking (Наш Проєкт)</th>
+            <th class="project-1">GitHub Projects</th>
+            <th class="project-2">Notion</th>
+            <th class="project-3">JIRA</th>
+            <th class="project-4">Asana</th>
+            <th class="project-5">Nifty</th>
+            <th class="project-6">Microsoft Project</th>
+            <th class="project-7">Click Up</th>
+            <th class="project-8">Monday.com</th> 
         </tr>
     </thead>
     <tbody>
@@ -215,156 +215,144 @@
         </tr>
         <!-- new requirement -->
         <tr>
-            <td class="requirements" rowspan=6>Usability (зручність роботи)</td>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <!-- new requirement -->
-        <tr>
-            <td class="requirements" rowspan=6>Reliability (надійність)</td>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
+    <td class="Вимоги" rowspan=5>Usability (зручність роботи)</td>
+    <td class="Критерії">User-friendly interface</td>
+    <td class="SigmaTasking (Наш Проєкт)">&#10004;</td>
+    <td class="GitHub Projects">&#10004;</td>
+    <td class="Notion">&#10004;</td>
+    <td class="Trello">&#10004;</td>
+    <td class="JIRA">&#10004;</td>
+    <td class="Asana">&#10004;</td>
+    <td class="Nift">&#10004;</td>
+    <td class="Microsoft Project">&#10004;</td>
+    <td class="Click Up">&#10004;</td>
+</tr>
+<tr>
+    <td class="criteria">Багатомовність</td>
+    <td class="SigmaTasking (Наш Проєкт)">&#10004;</td>
+    <td class="GitHub Projects">&#10008;</td>
+    <td class="Notion">&#10004;</td>
+    <td class="Trello">&#10008;</td>
+    <td class="JIRA">&#10004;</td>
+    <td class="Asana">&#10004;</td>
+    <td class="Nift">&#10004;</td>
+    <td class="Microsoft Project">&#10008;</td>
+    <td class="Click Up">&#10004;</td>
+</tr>
+<tr>
+    <td class="criteria">Інтеграція з Github</td>
+    <td class="SigmaTasking (Наш Проєкт)">&#10004;</td>
+    <td class="GitHub Projects">&#10004;</td>
+    <td class="Notion">&#10004;</td>
+    <td class="Trello">&#10008;</td>
+    <td class="JIRA">&#10004;</td>
+    <td class="Asana">&#10008;</td>
+    <td class="Nift">&#10004;</td>
+    <td class="Microsoft Project">&#10008;</td>
+    <td class="Click Up">&#10004;</td>
+</tr>
+<tr>
+    <td class="criteria">Ведення паралельно кількох проєктів</td>
+    <td class="SigmaTasking (Наш Проєкт)">&#10004;</td>
+    <td class="GitHub Projects">&#10008;</td>
+    <td class="Notion">&#10004;</td>
+    <td class="Trello">&#10004;</td>
+    <td class="JIRA">&#10008;</td>
+    <td class="Asana">&#10004;</td>
+    <td class="Nift">&#10008;</td>
+    <td class="Microsoft Project">&#10004;</td>
+    <td class="Click Up">&#10008;</td>
+</tr>
+<tr>
+    <td class="criteria">Доступ до дошки без реєстрації</td>
+    <td class="SigmaTasking (Наш Проєкт)">&#10008;</td>
+    <td class="GitHub Projects">&#10008;</td>
+    <td class="Notion">&#10008;</td>
+    <td class="Trello">&#10008;</td>
+    <td class="JIRA">&#10008;</td>
+    <td class="Asana">&#10004;</td>
+    <td class="Nift">&#10008;</td>
+    <td class="Microsoft Project">&#10008;</td>
+    <td class="Click Up">&#10004;</td>
+</tr>
+      
+<tr>
+    <td class="requirements" rowspan=6>Reliability (надійність)</td>
+    <td class="criteria">Резервне копіювання</td>
+    <td class="our-project">&#10004;</td>
+    <td class="project-1">&#10004;</td>
+    <td class="project-2">&#10004;</td>
+    <td class="project-3">&#10004;</td>
+    <td class="project-4">&#10004;</td>
+    <td class="project-5">&#10004;</td>
+    <td class="project-6">&#10004;</td>
+    <td class="project-7">&#10004;</td>
+    <td class="project-8">&#10004;</td>
+</tr>
+<tr>
+    <td class="criteria">Швидкість виправлення багів</td>
+    <td class="our-project">&#10004;</td>
+    <td class="project-1">&#10004;</td>
+    <td class="project-2">&#10004;</td>
+    <td class="project-3">&#10004;</td>
+    <td class="project-4">&#10004;</td>
+    <td class="project-5">&#10004;</td>
+    <td class="project-6">&#10004;</td>
+    <td class="project-7">&#10004;</td>
+    <td class="project-8">&#10004;</td>
+</tr>
+<tr>
+    <td class="criteria">Приватні проєкти</td>
+    <td class="our-project">&#10004;</td>
+    <td class="project-1">&#10004;</td>
+    <td class="project-2">&#10004;</td>
+    <td class="project-3">&#10008;</td>
+    <td class="project-4">&#10004;</td>
+    <td class="project-5">&#10004;</td>
+    <td class="project-6">&#10008;</td>
+    <td class="project-7">&#10004;</td>
+    <td class="project-8">&#10004;</td>
+</tr>
+<tr>
+    <td class="criteria">Історія зміни проєктів</td>
+    <td class="our-project">&#10004;</td>
+    <td class="project-1">&#10004;</td>
+    <td class="project-2">&#10004;</td>
+    <td class="project-3">&#10008;</td>
+    <td class="project-4">&#10004;</td>
+    <td class="project-5">&#10004;</td>
+    <td class="project-6">&#10004;</td>
+    <td class="project-7">&#10004;</td>
+    <td class="project-8">&#10004;</td>
+</tr>
+<tr>
+    <td class="criteria">Протокол шифрування</td>
+    <td class="our-project">TLS</td>
+    <td class="project-1">TLS</td>
+    <td class="project-2">TLS</td>
+    <td class="project-3">TLS</td>
+    <td class="project-4">TLS</td>
+    <td class="project-5">TLS</td>
+    <td class="project-6">TLS</td>
+    <td class="project-7">TLS</td>
+    <td class="project-8">TLS</td>
+</tr>
+<tr>
+    <td class="criteria">Багаторівнева автентифікація</td>
+    <td class="our-project">&#10004;</td>
+    <td class="project-1">&#10004;</td>
+    <td class="project-2">&#10004;</td>
+    <td class="project-3">&#10004;</td>
+    <td class="project-4">&#10004;</td>
+    <td class="project-5">&#10004;</td>
+    <td class="project-6">&#10004;</td>
+    <td class="project-7">&#10004;</td>
+    <td class="project-8">&#10004;</td>
+</tr>
         <!-- new requirement -->
         <tr>
             <td class="requirements" rowspan=6>Performance (продуктивність)</td>
-            <td class="criteria">-</td>
+            <td class="criteria"></td>
             <td class="our-project">-</td>
             <td class="project-1">-</td>
             <td class="project-2">-</td>
