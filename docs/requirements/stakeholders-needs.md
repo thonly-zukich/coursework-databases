@@ -86,88 +86,13 @@
 
 ## Характеристика ділових процесів
 
-<table border="1">
-    <tr>
+<tr>
         <th>ID</th>
-        <td>BanUser</td>
+        <th id="SignUpUser"><code>SignUpUser</code></th>
     </tr>
     <tr>
         <th>Назва</th>
-        <td>Заборонити користувача (Ban User)</td>
-    </tr>
-    <tr>
-        <th>Учасники</th>
-        <td>Адміністратор, система</td>
-    </tr>
-    <tr>
-        <th>Передумови</th>
-        <td>Адміністратор авторизований у системі</td>
-    </tr>
-    <tr>
-        <th>Результат</th>
-        <td>Користувач заборонений та не може входити в систему</td>
-    </tr>
-    <tr>
-        <th>Виключні ситуації</th>
-        <td>Користувача не знайдено (UserNotFoundException), недоступні права (InsufficientPermissionsException)</td>
-    </tr>
-    <tr>
-        <th>Основний сценарій</th>
-        <td>
-            1. Адміністратор вибирає користувача зі списку.<br>
-            2. Адміністратор натискає кнопку "Заборонити користувача".<br>
-            3. Система перевіряє права адміністратора (можливе InsufficientPermissionsException).<br>
-            4. Система забороняє користувача.<br>
-            5. Користувач отримує повідомлення про заборону (можливе UserNotFoundException).
-        </td>
-    </tr>
-</table>
-
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <td>UnbanUser</td>
-    </tr>
-    <tr>
-        <th>Назва</th>
-        <td>Дозволити користувача (Unban User)</td>
-    </tr>
-    <tr>
-        <th>Учасники</th>
-        <td>Адміністратор, система</td>
-    </tr>
-    <tr>
-        <th>Передумови</th>
-        <td>Адміністратор авторизований у системі</td>
-    </tr>
-    <tr>
-        <th>Результат</th>
-        <td>Користувач дозволений та може знову входити в систему</td>
-    </tr>
-    <tr>
-        <th>Виключні ситуації</th>
-        <td>Користувача не знайдено (UserNotFoundException), недоступні права (InsufficientPermissionsException)</td>
-    </tr>
-    <tr>
-        <th>Основний сценарій</th>
-        <td>
-            1. Адміністратор вибирає забороненого користувача зі списку.<br>
-            2. Адміністратор натискає кнопку "Дозволити користувача".<br>
-            3. Система перевіряє права адміністратора (можливе InsufficientPermissionsException).<br>
-            4. Система дозволяє користувача.<br>
-            5. Користувач отримує повідомлення про дозвіл.
-        </td>
-    </tr>
-</table>
-
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <td>WriteToSupport</td>
-    </tr>
-    <tr>
-        <th>Назва</th>
-        <td>Написати в службу підтримки (Write to Support)</td>
+        <td>Створити користувача</td>
     </tr>
     <tr>
         <th>Учасники</th>
@@ -175,73 +100,46 @@
     </tr>
     <tr>
         <th>Передумови</th>
-        <td>Користувач зареєстрований та авторизований у системі</td>
+        <td>Користувач не зареєстрований в системі</td>
     </tr>
     <tr>
         <th>Результат</th>
-        <td>Повідомлення відправлено до служби підтримки</td>
+        <td>Створення облікового запису користувача</td>
     </tr>
     <tr>
         <th>Виключні ситуації</th>
-        <td>Не введено текст повідомлення (NullInstanceException), недопустимий формат (InvalidMessageFormatException)</td>
-    </tr>
-    <tr>
-        <th>Основний сценарій</th>
         <td>
-            1. Користувач відкриває форму для зв'язку зі службою підтримки.<br>
-            2. Користувач вводить текст повідомлення (можливе NullInstanceException).<br>
-            3. Система перевіряє введені дані (можливе InvalidMessageFormatException).<br>
-            4. Система відправляє повідомлення до служби підтримки.<br>
-            5. Користувач отримує підтвердження про відправлення повідомлення.
+            <ul>
+                <li>Не введене ім'я користувача (NullUsernameException)</li>
+                <li>Не введена пошта (NullEmailException)</li>
+                <li>Не введений пароль (NullPasswordException)</li>
+                <li>Користувач з таким ім'ям вже існує (UserAlreadyExistsException)</li>
+                <li>Вказаний неправильний формат пошти (WrongEmailFormatException)</li>
+                <li>Пароль недостатньо сильний (менше 8 символів, не містить букв і цифр) (WeakPasswordException)</li>
+            </ul>
         </td>
     </tr>
-</table>
-
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <td>Usability</td>
-    </tr>
-    <tr>
-        <th>Назва</th>
-        <td>Оцінка експлуатаційної придатності (Evaluate Usability)</td>
-    </tr>
-    <tr>
-        <th>Учасники</th>
-        <td>Користувач, система</td>
-    </tr>
-    <tr>
-        <th>Передумови</th>
-        <td>Користувач зареєстрований та авторизований у системі</td>
-    </tr>
-    <tr>
-        <th>Результат</th>
-        <td>Оцінка експлуатаційної придатності системи</td>
-    </tr>
-    <tr>
-        <th>Виключні ситуації</th>
-        <td>Не введено коментар (NullInstanceException), недопустимий формат оцінки (InvalidRatingFormatException)</td>
-    </tr>
     <tr>
         <th>Основний сценарій</th>
         <td>
-            1. Користувач переходить до розділу "Оцінка експлуатаційної придатності".<br>
-            2. Користувач вибирає рейтинг та вводить коментар (можливе NullInstanceException).<br>
-            3. Система перевіряє введені дані (можливе InvalidRatingFormatException).<br>
-            4. Система зберігає оцінку та коментар.<br>
-            5. Користувач отримує підтвердження про успішне збереження оцінки.
+            <ol>
+                <li>Користувач натискає на кнопку "Зареєструватись"</li>
+                <li>Користувач заповнює поля реєстрації (ім'я користувача, пошта, пароль)</li>
+                <li>Система перевіряє введені поля на валідність</li>
+                <li>Користувач натискає на кнопку "Створити"</li>
+                <li>Система створює обліковий запис користувача</li>
+                <li>Користувач автоматично входить в систему</li>
+            </ol>
         </td>
     </tr>
 </table>
 
 
-*Дається опис бізнес-сценаріїв взаємодії бізнес-акторів, робітників і, можливо, інформаційної системи за допомогою наступної
-специфікації:*
 
-<table border="1">
+<table>
     <tr>
         <th>ID</th>
-        <td>LogInUser</td>
+        <th id="LogInUser"><code>LogInUser</code></th>
     </tr>
     <tr>
         <th>Назва</th>
@@ -278,10 +176,12 @@
     </tr>
 </table>
 
-<table border="1">
+
+
+<table>
     <tr>
         <th>ID</th>
-        <td>EditUser</td>
+        <td id="EditUser"><code>EditUser</code></td>
     </tr>
     <tr>
         <th>Назва</th>
@@ -319,10 +219,12 @@
     </tr>
 </table>
 
-<table border="1">
+
+
+<table>
     <tr>
         <th>ID</th>
-        <td>DeleteUser</td>
+        <td id="DeleteUser"><code>DeleteUser</code></td>
     </tr>
     <tr>
         <th>Назва</th>
@@ -358,11 +260,257 @@
     </tr>
 </table>
 
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="CreateProject"><code>CreateProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="EditProject"><code>EditProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="DeleteProject"><code>DeleteProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="AddMemberToProject"><code>AddMemberToProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="RemoveMemberFromProject"><code>RemoveMemberFromProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="CreateTask"><code>CreateTask</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="EditTask"><code>EditTask</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="DeleteTask"><code>DeleteTask</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+
    
 <table style="border: 1px solid black; border-collapse: collapse;">
   <tr style="background-color: #d4f7dc;">
     <th style="border: 1px solid black; padding: 8px;">ID</th>
-    <td style="border: 1px solid black; padding: 8px;">CreateBoard</td>
+    <td style="border: 1px solid black; padding: 8px;" id="CreateBoard"><code>CreateBoard</code></td>
   </tr>
   <tr style="background-color: #d4f7dc;">
     <th style="border: 1px solid black; padding: 8px;">Назва</th>
@@ -401,7 +549,7 @@
 <table style="border: 1px solid black; border-collapse: collapse;">
   <tr style="background-color: #d4f7dc;">
     <th style="border: 1px solid black; padding: 8px;">ID</th>
-    <td style="border: 1px solid black; padding: 8px;">EditBoard</td>
+    <td style="border: 1px solid black; padding: 8px;" id="EditBoard"><code>EditBoard</code></td>
   </tr>
   <tr style="background-color: #d4f7dc;">
     <th style="border: 1px solid black; padding: 8px;">Назва</th>
@@ -440,7 +588,7 @@
 <table style="border: 1px solid black; border-collapse: collapse;">
   <tr style="background-color: #d4f7dc;">
     <th style="border: 1px solid black; padding: 8px;">ID</th>
-    <td style="border: 1px solid black; padding: 8px;">DeleteBoard</td>
+    <td style="border: 1px solid black; padding: 8px;" id="DeleteBoard"><code>DeleteBoard</code></td>
   </tr>
   <tr style="background-color: #d4f7dc;">
     <th style="border: 1px solid black; padding: 8px;">Назва</th>
@@ -476,8 +624,122 @@
   </tr>
 </table>
 
-*Кількість сценаріїв визначається у відповідності до специфіки завдання та необхідного 
-рівня деталізації (зазвичай, 5-6 сценаріїв).*
+
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="BanUser"><code>BanUser</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Заборонити користувача (Ban User)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Адміністратор авторизований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Користувач заборонений та не може входити в систему</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Користувача не знайдено (UserNotFoundException), недоступні права (InsufficientPermissionsException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Адміністратор вибирає користувача зі списку.<br>
+            2. Адміністратор натискає кнопку "Заборонити користувача".<br>
+            3. Система перевіряє права адміністратора (можливе InsufficientPermissionsException).<br>
+            4. Система забороняє користувача.<br>
+            5. Користувач отримує повідомлення про заборону (можливе UserNotFoundException).
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="UnbanUser"><code>UnbanUser</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Дозволити користувача (Unban User)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Адміністратор авторизований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Користувач дозволений та може знову входити в систему</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Користувача не знайдено (UserNotFoundException), недоступні права (InsufficientPermissionsException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Адміністратор вибирає забороненого користувача зі списку.<br>
+            2. Адміністратор натискає кнопку "Дозволити користувача".<br>
+            3. Система перевіряє права адміністратора (можливе InsufficientPermissionsException).<br>
+            4. Система дозволяє користувача.<br>
+            5. Користувач отримує повідомлення про дозвіл.
+        </td>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="WriteToSupport"><code>WriteToSupport</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Написати в службу підтримки (Write to Support)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач зареєстрований та авторизований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Повідомлення відправлено до служби підтримки</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Не введено текст повідомлення (NullInstanceException), недопустимий формат (InvalidMessageFormatException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Користувач відкриває форму для зв'язку зі службою підтримки.<br>
+            2. Користувач вводить текст повідомлення (можливе NullInstanceException).<br>
+            3. Система перевіряє введені дані (можливе InvalidMessageFormatException).<br>
+            4. Система відправляє повідомлення до служби підтримки.<br>
+            5. Користувач отримує підтвердження про відправлення повідомлення.
+        </td>
+    </tr>
+</table>
+
+
+
 
 ## Короткий огляд продукту
 
