@@ -261,9 +261,29 @@ RAD (Rapid Application Development) — це методологія розроб
 
 ### DevOps
 
-*[1. Коротко описати.]*  
-*[2. Вказати основні переваги та недоліки.]*  
-*[3. Додати гарну схему та вказати нижче посилання.]*  
+<p> <b>DevOps</b> — низка практик, призначених для пожвавлення взаємодії розробників із фахівцями інформаційно-технологічного обслуговування та зближення їхніх робочих процесів одне з одним. Ґрунтується на думці про тісну взаємозалежність між розробкою та використанням програмного забезпечення і має на меті допомогти організаціям швидше створювати та оновлювати програмні продукти та послуги.</p> 
+<h2>Переваги:</h2>
+<ul>
+    <li><strong>Швидкість розробки:</strong> Автоматизація процесів дозволяє швидше впроваджувати зміни.</li>
+    <li><strong>Покращена співпраця:</strong> Зміцнення комунікації між командами розробки та експлуатації.</li>
+    <li><strong>Частіше впровадження:</strong> Часті оновлення завдяки CI/CD.</li>
+    <li><strong>Зниження ризиків:</strong> Виявлення проблем на ранніх етапах через автоматизацію тестування.</li>
+    <li><strong>Ефективність ресурсів:</strong> Оптимізація використання ресурсів знижує витрати.</li>
+</ul>
+
+<h2>Недоліки:</h2>
+<ul>
+    <li><strong>Складність впровадження:</strong> Значні зміни в культурі та процесах можуть викликати опір.</li>
+    <li><strong>Необхідність навичок:</strong> Потрібні нові знання в області автоматизації та CI/CD.</li>
+    <li><strong>Ризик надмірної автоматизації:</strong> Може призвести до проблем без контролю якості.</li>
+    <li><strong>Безпека:</strong> Інтеграція безпеки в процеси може бути складною.</li>
+    <li><strong>Витрати на інструменти:</strong> Навчання та впровадження можуть бути дорогими.</li>
+</ul>
+
+<img src="https://img.freepik.com/premium-vector/devops-scheme-software-development-lifecycle-operations-concept-software-engineering-workflow-cycle-vector-illustration-devops-software-development-process_229548-2380.jpg" alt="Схема DevOps">
+
+<p>Джерело схеми: <a href="https://img.freepik.com/premium-vector/devops-scheme-software-development-lifecycle-operations-concept-software-engineering-workflow-cycle-vector-illustration-devops-software-development-process_229548-2380.jpg">DevOps</a></p>
+
 
 
 ## Порівняльна характеристика існуючих засобів вирішення завдання
@@ -493,8 +513,7 @@ RAD (Rapid Application Development) — це методологія розроб
             <td class="project-7">-</td>
             <td class="project-8">-</td>
         </tr>
-      
-        <!-- new requirement -->
+
         <tr>
  <tr>
     <td class="Вимоги" rowspan=5><strong>Usability (зручність роботи)</strong></td>
@@ -708,77 +727,78 @@ RAD (Rapid Application Development) — це методологія розроб
         </tr>
         <!-- new requirement -->
         <tr>
+           <tr>
             <td class="requirements" rowspan=6>Supportability (підтримка)</td>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <th class="criteria"><strong>Документація</strong></th>
+            <td class="our-project">✖</td>
+            <td class="project-1">✔</td>
+            <td class="project-2">✔</td>
+            <td class="project-3">✖</td>
+            <td class="project-4">✔</td>
+            <td class="project-5">✔</td>
+            <td class="project-6">✔</td>
+            <td class="project-7">✔</td>
+            <td class="project-8">✔</td>
         </tr>
         <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="criteria"><strong>Технічна підтримка</strong></td>
+            <td class="our-project">✖</td>
+            <td class="project-1">✖</td>
+            <td class="project-2">✔</td>
+            <td class="project-3">✖</td>
+            <td class="project-4">✔</td>
+            <td class="project-5">✔</td>
+            <td class="project-6">✔</td>
+            <td class="project-7">✔</td>
+            <td class="project-8">✔</td>
         </tr>
         <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="criteria"><strong>Форум/спільнота</strong></td>
+            <td class="our-project">✖</td>
+            <td class="project-1">✖</td>
+            <td class="project-2">✔</td>
+            <td class="project-3">✖</td>
+            <td class="project-4">✔</td>
+            <td class="project-5">✔</td>
+            <td class="project-6">✔</td>
+            <td class="project-7">✖</td>
+            <td class="project-8">✔</td>
         </tr>
         <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="criteria"><strong>Відеоуроки</strong></td>
+            <td class="our-project">✖</td>
+            <td class="project-1">✖</td>
+            <td class="project-2">✔</td>
+            <td class="project-3">✖</td>
+            <td class="project-4">✖</td>
+            <td class="project-5">✔</td>
+            <td class="project-6">✔</td>
+            <td class="project-7">✖</td>
+            <td class="project-8">✔</td>
         </tr>
         <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="criteria"><strong>Часті оновлення</strong></td>
+            <td class="our-project">✖</td>
+            <td class="project-1">✔</td>
+            <td class="project-2">✔</td>
+            <td class="project-3">✔</td>
+            <td class="project-4">✔</td>
+            <td class="project-5">✔</td>
+            <td class="project-6">✔</td>
+            <td class="project-7">✔</td>
+            <td class="project-8">✔</td>
         </tr>
         <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="criteria"><strong>Наявність FAQ</strong></td>
+            <td class="our-project">✖</td>
+            <td class="project-1">✔</td>
+            <td class="project-2">✔</td>
+            <td class="project-3">✖</td>
+            <td class="project-4">✔</td>
+            <td class="project-5">✔</td>
+            <td class="project-6">✔</td>
+            <td class="project-7">✔</td>
+            <td class="project-8">✔</td>
         </tr>
     </tbody>
 </table>
