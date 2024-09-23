@@ -55,137 +55,684 @@
 
 ## Короткий зміст
 
-*[Розділ містить опис того, про що йдеться в еій частині цього документу, що залишилася. 
-Також тут описана структура документу.]*
+* [Характеристика ділових процесів](#характеристика-ділових-процесів)  
+    * [Sing up User](#SignUpUser)  
+    * [Log in User](#LogInUser)  
+    * [Edit User](#EditUser)  
+    * [Delete User](#DeleteUser)  
+    * [Create Project](#CreateUser)  
+    * [Edit Project](#EditProject)  
+    * [Delete Project](#DeleteProject)  
+    * [Add Member to Project](#AddMemberToProject)  
+    * [Remove Member from Project](#RemoveMemberFromProject)   
+    * [Create Board](#CreateBoard)  
+    * [Edit Board](#EditBoard)  
+    * [Delete Board](#DeleteBoard)   
+    * [Create Task](#CreateTask)  
+    * [Edit Task](#EditTask)  
+    * [Delete Task](#DeleteTask)   
+    * [Ban User](#BanUser)  
+    * [Unban User](#UnbanUser)   
+    * [Write to Support](#WriteToSupport) 
+ * [Короткий огляд продукту](#короткий-огляд-продукту)
+ * [Функціональність](#функціональність)
+    * [Інтерфейс звичайного користувача](#інтерфейс-звичайного-користувача)
+    * [Інтерфейс керівника проєкту](#інтерфейс-керівника-проєкту)
+    * [Інтерфейс адміністратора](#інтерфейс-адміністратора)
+* [Практичність](#практичність)
+* [Надійність](#надійність)
+* [Продуктивність](#продуктивність)
+* [Експлуатаційна придатність](#експлуатаційна-придатність)
 
 ## Характеристика ділових процесів
 
-*[В цьому розділі визначаються зовнішні фактори, що впливають на бізнес (бізнес-актори), 
-та внутрішні фактори (робітники), дається загальна характеристика діяльності бізнес-акторів 
-та робітників, яка здійснюється за допомогою бізнесу.*
+<tr>
+        <th>ID</th>
+        <th id="SignUpUser"><code>SignUpUser</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Створити користувача</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач не зареєстрований в системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Створення облікового запису користувача</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Не введене ім'я користувача (NullUsernameException)</li>
+                <li>Не введена пошта (NullEmailException)</li>
+                <li>Не введений пароль (NullPasswordException)</li>
+                <li>Користувач з таким ім'ям вже існує (UserAlreadyExistsException)</li>
+                <li>Вказаний неправильний формат пошти (WrongEmailFormatException)</li>
+                <li>Пароль недостатньо сильний (менше 8 символів, не містить букв і цифр) (WeakPasswordException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач натискає на кнопку "Зареєструватись"</li>
+                <li>Користувач заповнює поля реєстрації (ім'я користувача, пошта, пароль)</li>
+                <li>Система перевіряє введені поля на валідність</li>
+                <li>Користувач натискає на кнопку "Створити"</li>
+                <li>Система створює обліковий запис користувача</li>
+                <li>Користувач автоматично входить в систему</li>
+            </ol>
+        </td>
+    </tr>
+</table>
 
-*Дається опис бізнес-сценаріїв взаємодії бізнес-акторів, робітників і, можливо, інформаційної системи за допомогою наступної
-специфікації:*
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="LogInUser"><code>LogInUser</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Вхід користувача (Log In User)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач зареєстрований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Користувач успішно увійшов у систему</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            - Неправильний пароль (InvalidPasswordException)<br>
+            - Невірне ім'я користувача (InvalidUsernameException)<br>
+            - Користувач заблокований (UserBannedException)
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Користувач вводить ім'я користувача і пароль.<br>
+            2. Система перевіряє введені дані (можливе InvalidPasswordException або InvalidUsernameException).<br>
+            3. Система перевіряє статус користувача (можливе UserBannedException).<br>
+            4. Користувач успішно входить у систему.
+        </td>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="EditUser"><code>EditUser</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Редагувати користувача (Edit User)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач або адміністратор авторизований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Дані користувача успішно змінені</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            - Користувач не знайдений (UserNotFoundException)<br>
+            - Недостатньо прав для редагування (InsufficientPermissionsException)<br>
+            - Невірний формат даних (InvalidDataFormatException)
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Адміністратор або користувач відкриває профіль користувача.<br>
+            2. Користувач або адміністратор змінює потрібні поля.<br>
+            3. Система перевіряє права (можливе InsufficientPermissionsException).<br>
+            4. Система перевіряє введені дані на правильність (можливе InvalidDataFormatException).<br>
+            5. Дані користувача успішно збережені.
+        </td>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="DeleteUser"><code>DeleteUser</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Видалити користувача (Delete User)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Адміністратор авторизований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Користувача видалено з системи</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            - Користувача не знайдено (UserNotFoundException)<br>
+            - Недостатньо прав для видалення (InsufficientPermissionsException)
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Адміністратор вибирає користувача для видалення.<br>
+            2. Адміністратор натискає кнопку "Видалити користувача".<br>
+            3. Система перевіряє права адміністратора (можливе InsufficientPermissionsException).<br>
+            4. Система видаляє користувача (можливе UserNotFoundException).
+        </td>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="CreateProject"><code>CreateProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="EditProject"><code>EditProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="DeleteProject"><code>DeleteProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="AddMemberToProject"><code>AddMemberToProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="RemoveMemberFromProject"><code>RemoveMemberFromProject</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="CreateTask"><code>CreateTask</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="EditTask"><code>EditTask</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="DeleteTask"><code>DeleteTask</code></th>
+    </tr>
+    <tr>
+        <td>Назва</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Учасники</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Передумови</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Результат</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Виключні ситуації</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Основний сценарій</td>
+        <td></td>
+    </tr>
+</table>
+
    
-<table style="border: 1px solid black; border-collapse: collapse;">
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">ID</th>
-    <td style="border: 1px solid black; padding: 8px;">CreateBoard</td>
-  </tr>
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">Назва</th>
-    <td style="border: 1px solid black; padding: 8px;">Створити дошку (Create Board)</td>
-  </tr>
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Учасники</th>
-    <td style="border: 1px solid black; padding: 8px;">Користувач (тимлід або розробник), система</td>
-  </tr>
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">Передумови</th>
-    <td style="border: 1px solid black; padding: 8px;">Користувач зареєстрований та авторизований у системі</td>
-  </tr>
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Результат</th>
-    <td style="border: 1px solid black; padding: 8px;">Нова дошка створена та доступна для користування</td>
-  </tr>
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">Виключні ситуації</th>
-    <td style="border: 1px solid black; padding: 8px;">Користувач не ввів назву дошки (NullInstanceException), недопустима назва (InvalidBoardNameException)</td>
-  </tr>
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Основний сценарій</th>
-    <td style="border: 1px solid black; padding: 8px;">
-      <ol>
-        <li>Користувач натискає кнопку "Створити дошку"</li>
-        <li>Користувач вводить назву дошки (можливе NullInstanceException)</li>
-        <li>Система перевіряє введені дані (можливе InvalidBoardNameException)</li>
-        <li>Система створює нову дошку</li>
-        <li>Користувач отримує доступ до дошки</li>
-      </ol>
-    </td>
-  </tr>
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="CreateBoard"><code>CreateBoard</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Створити дошку (Create Board)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (тимлід або розробник), система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач зареєстрований і авторизований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Нова дошка створена та доступна для користування</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Користувач не ввів назву дошки (NullInstanceException), недопустима назва (InvalidBoardNameException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Користувач натискає кнопку "Створити дошку".<br>
+            2. Користувач вводить назву дошки (можливе NullInstanceException).<br>
+            3. Система перевіряє введені дані (можливе InvalidBoardNameException).<br>
+            4. Система створює нову дошку.<br>
+            5. Користувач отримує доступ до дошки.
+        </td>
+    </tr>
 </table>
 
-<table style="border: 1px solid black; border-collapse: collapse;">
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">ID</th>
-    <td style="border: 1px solid black; padding: 8px;">EditBoard</td>
-  </tr>
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">Назва</th>
-    <td style="border: 1px solid black; padding: 8px;">Редагувати дошку (Edit Board)</td>
-  </tr>
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Учасники</th>
-    <td style="border: 1px solid black; padding: 8px;">Користувач (тимлід або розробник), система</td>
-  </tr>
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">Передумови</th>
-    <td style="border: 1px solid black; padding: 8px;">Користувач має права на редагування дошки</td>
-  </tr>
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Результат</th>
-    <td style="border: 1px solid black; padding: 8px;">Зміни збережені</td>
-  </tr>
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">Виключні ситуації</th>
-    <td style="border: 1px solid black; padding: 8px;">Дошка не знайдена (BoardNotFoundException), відсутні права на редагування (AccessDeniedException)</td>
-  </tr>
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Основний сценарій</th>
-    <td style="border: 1px solid black; padding: 8px;">
-      <ol>
-        <li>Користувач відкриває дошку</li>
-        <li>Користувач натискає кнопку "Редагувати"</li>
-        <li>Користувач вносить зміни в дошку</li>
-        <li>Система перевіряє права на редагування (можливе AccessDeniedException)</li>
-        <li>Система зберігає зміни</li>
-      </ol>
-    </td>
-  </tr>
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="EditBoard"><code>EditBoard</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Редагувати дошку (Edit Board)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (тимлід або розробник), система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач має права на редагування дошки</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Зміни збережені</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Дошка не знайдена (BoardNotFoundException), відсутні права на редагування (AccessDeniedException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Користувач відкриває дошку.<br>
+            2. Користувач натискає кнопку "Редагувати".<br>
+            3. Користувач вносить зміни.<br>
+            4. Система перевіряє права на редагування (можливе AccessDeniedException).<br>
+            5. Система зберігає зміни.
+        </td>
+    </tr>
 </table>
 
-<table style="border: 1px solid black; border-collapse: collapse;">
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">ID</th>
-    <td style="border: 1px solid black; padding: 8px;">DeleteBoard</td>
-  </tr>
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">Назва</th>
-    <td style="border: 1px solid black; padding: 8px;">Видалити дошку (Delete Board)</td>
-  </tr>
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Учасники</th>
-    <td style="border: 1px solid black; padding: 8px;">Користувач (тимлід або розробник), система</td>
-  </tr>
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">Передумови</th>
-    <td style="border: 1px solid black; padding: 8px;">Користувач має права на видалення дошки</td>
-  </tr>
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Результат</th>
-    <td style="border: 1px solid black; padding: 8px;">Дошка видалена</td>
-  </tr>
-  <tr style="background-color: #d4f7dc;">
-    <th style="border: 1px solid black; padding: 8px;">Виключні ситуації</th>
-    <td style="border: 1px solid black; padding: 8px;">Дошка не знайдена (BoardNotFoundException), відсутні права на видалення (AccessDeniedException)</td>
-  </tr>
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Основний сценарій</th>
-    <td style="border: 1px solid black; padding: 8px;">
-      <ol>
-        <li>Користувач відкриває дошку</li>
-        <li>Користувач натискає кнопку "Видалити"</li>
-        <li>Система перевіряє права на видалення (можливе AccessDeniedException)</li>
-        <li>Система видаляє дошку</li>
-        <li>Користувач отримує підтвердження про успішне видалення</li>
-      </ol>
-    </td>
-  </tr>
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="DeleteBoard"><code>DeleteBoard</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Видалити дошку (Delete Board)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (тимлід або розробник), система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач має права на видалення дошки</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Дошка видалена</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Дошка не знайдена (BoardNotFoundException), відсутні права на видалення (AccessDeniedException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Користувач відкриває дошку.<br>
+            2. Користувач натискає кнопку "Видалити".<br>
+            3. Система перевіряє права на видалення (можливе AccessDeniedException).<br>
+            4. Система видаляє дошку.<br>
+            5. Користувач отримує підтвердження про успішне видалення.
+        </td>
+    </tr>
 </table>
 
-*Кількість сценаріїв визначається у відповідності до специфіки завдання та необхідного 
-рівня деталізації (зазвичай, 5-6 сценаріїв).*
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="BanUser"><code>BanUser</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Заборонити користувача (Ban User)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Адміністратор авторизований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Користувач заборонений та не може входити в систему</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Користувача не знайдено (UserNotFoundException), недоступні права (InsufficientPermissionsException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Адміністратор вибирає користувача зі списку.<br>
+            2. Адміністратор натискає кнопку "Заборонити користувача".<br>
+            3. Система перевіряє права адміністратора (можливе InsufficientPermissionsException).<br>
+            4. Система забороняє користувача.<br>
+            5. Користувач отримує повідомлення про заборону (можливе UserNotFoundException).
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="UnbanUser"><code>UnbanUser</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Дозволити користувача (Unban User)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Адміністратор авторизований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Користувач дозволений та може знову входити в систему</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Користувача не знайдено (UserNotFoundException), недоступні права (InsufficientPermissionsException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Адміністратор вибирає забороненого користувача зі списку.<br>
+            2. Адміністратор натискає кнопку "Дозволити користувача".<br>
+            3. Система перевіряє права адміністратора (можливе InsufficientPermissionsException).<br>
+            4. Система дозволяє користувача.<br>
+            5. Користувач отримує повідомлення про дозвіл.
+        </td>
+    </tr>
+</table>
+
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="WriteToSupport"><code>WriteToSupport</code></td>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Написати в службу підтримки (Write to Support)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач зареєстрований та авторизований у системі</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Повідомлення відправлено до служби підтримки</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Не введено текст повідомлення (NullInstanceException), недопустимий формат (InvalidMessageFormatException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            1. Користувач відкриває форму для зв'язку зі службою підтримки.<br>
+            2. Користувач вводить текст повідомлення (можливе NullInstanceException).<br>
+            3. Система перевіряє введені дані (можливе InvalidMessageFormatException).<br>
+            4. Система відправляє повідомлення до служби підтримки.<br>
+            5. Користувач отримує підтвердження про відправлення повідомлення.
+        </td>
+    </tr>
+</table>
+
+
+
 
 ## Короткий огляд продукту
 
@@ -197,10 +744,23 @@
 
 ## Функціональність
 
-*[Functionality (функциональні вимоги)]*
+*[Functionality (функциональні вимоги)]*  
+*[Короткий опис]*
+
+### Інтерфейс звичайного користувача
+
+*[Опис того, що може робити звичайний користувач]*
+
+### Інтерфейс керівника проєкту
+
+*[Опис того, що може робити керівник проєкту]*
+
+### Інтерфейс адміністратора
+
+*[Опис того, що може робити адміністратор]*
+
 
 ## Практичність
-
 <ul>
     <li>Чистий, мінімалістичний інтерфейс із зрозумілим дизайном, що не потребує додаткового навчання.</li>
     <li>Підтримка кількох мов для зручного використання користувачами з різних країн.</li>
@@ -213,9 +773,16 @@
     <li>Підтримка адаптації інтерфейсу до різних роздільних здатностей екранів.</li>
 </ul>
 
+
 ## Надійність
 
-*[Reliability (вимоги до надійності)]*
+- **Резервне копіювання:** Регулярне резервне копіювання даних забезпечує захист від втрати інформації та швидке відновлення системи у разі збою.
+- **Швидкість виправлення багів:** Ефективний процес виправлення помилок гарантує високу стабільність роботи системи та мінімізує час простою.
+- **Приватні проєкти:** Підтримка приватних проєктів забезпечує безпеку конфіденційних даних та контроль доступу до них.
+- **Історія зміни проєктів:** Ведення історії змін дозволяє відстежувати еволюцію проєктів, що сприяє кращому управлінню та аналізу.
+- **Протокол шифрування TLS:** Використання протоколу TLS забезпечує захищений обмін даними між клієнтом та сервером, захищаючи інформацію від несанкціонованого доступу.
+- **Багаторівнева автентифікація:** Впровадження багаторівневої автентифікації підвищує рівень безпеки доступу до системи, зменшуючи ризик несанкціонованого входу.
+
 
 ## Продуктивність
 
@@ -228,4 +795,5 @@
 
 ## Експлуатаційна придатність
 
-*[Supportability (вимоги до підтримки)]*
+*[Supportability (вимоги до підтримки)]*  
+*[Орієнтуйтеся на критерії з таблиці та додайте ще]*
