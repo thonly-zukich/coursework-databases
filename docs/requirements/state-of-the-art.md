@@ -336,17 +336,6 @@ RAD (Rapid Application Development) — це методологія розроб
             <th class="project-6">Microsoft Project</th>
             <th class="project-7">Click Up</th>
             <th class="project-8">Monday.com</th> 
-
-    <th class="criteria">Критерії</th>
-    <th class="our-project">SigmaTasking (Наш Проєкт)</th>
-    <th class="project-1">GitHub Projects</th>
-    <th class="project-2">Notion</th>
-    <th class="project-3">Trello</th>
-    <th class="project-4">JIRA</th>
-    <th class="project-5">Asana</th>
-    <th class="project-6">Nifty</th>
-    <th class="project-7">Microsoft Project</th>
-    <th class="project-8">ClickUp</th>
         </tr>
     </thead>
     <tbody>
@@ -367,7 +356,6 @@ RAD (Rapid Application Development) — це методологія розроб
         </tr>
         -->
             <td class="requirements" rowspan=6>Functionality (функціональність)</td>
-
             <th class="criteria">Кросплатформеність</th>
     <td class="our-project">✖</td>
     <td class="project-1">✔</td>
@@ -513,8 +501,6 @@ RAD (Rapid Application Development) — це методологія розроб
             <td class="project-7">-</td>
             <td class="project-8">-</td>
         </tr>
-
-        <tr>
  <tr>
     <td class="Вимоги" rowspan=5><strong>Usability (зручність роботи)</strong></td>
     <td class="Критерії"><strong>User-friendly interface</strong></td>
@@ -650,11 +636,10 @@ RAD (Rapid Application Development) — це методологія розроб
     <td class="project-7">&#10004;</td>
     <td class="project-8">&#10004;</td>
 </tr>
-      
         <!-- new requirement -->
         <tr>
             <td class="requirements" rowspan=6>Performance (продуктивність)</td>
-            <td class="criteria"></td>
+            <td class="criteria">-</td>
             <td class="our-project">-</td>
             <td class="project-1">-</td>
             <td class="project-2">-</td>
