@@ -51,6 +51,26 @@
 
         <img src="https://miro.medium.com/v2/resize:fit:1083/1*h9iv87c9Lp5aGksmSrRB5g.png" alt="Схема Scrum">
         <p><a href="https://ru.wikipedia.org/wiki/Scrum" target="_blank">Докладніше про Scrum</a></p>
+<h4>Плюси:</h4>
+<ul>
+    <li>Швидка реакція на зміни та постійне вдосконалення продукту.</li>
+    <li>Висока залученість команди та замовника.</li>
+    <li>Можливість регулярного отримання результатів після кожного спринта.</li>
+</ul>
+
+<h4>Мінуси:</h4>
+<ul>
+    <li>Може бути складним для великих команд.</li>
+    <li>Потребує чіткого дотримання правил і дисципліни.</li>
+    <li>Вимагає активної участі замовника.</li>
+</ul>
+
+<figure>
+    <img src="https://miro.medium.com/v2/resize:fit:1083/1*h9iv87c9Lp5aGksmSrRB5g.png" alt="Схема Scrum">
+    <figcaption>Схема Scrum</figcaption>
+</figure>
+
+<p><a href="https://ru.wikipedia.org/wiki/Scrum" target="_blank">Докладніше про Scrum</a></p>
 
 ### Kanban
 
@@ -71,6 +91,26 @@
 
         <img src="https://miro.medium.com/v2/resize:fit:1083/1*T8urfVVVAwlFtM5an-TBJg.png" alt="Схема Kanban">
         <p><a href="https://ru.wikipedia.org/wiki/Kanban" target="_blank">Докладніше про Kanban</a></p>
+<h4>Плюси:</h4>
+<ul>
+    <li>Висока гнучкість та прозорість процесів.</li>
+    <li>Легка візуалізація статусу кожного завдання.</li>
+    <li>Підходить для процесів з непостійними або частими змінами.</li>
+</ul>
+
+<h4>Мінуси:</h4>
+<ul>
+    <li>Відсутність чітко структурованих ітерацій може ускладнити планування.</li>
+    <li>Може бути менш ефективним у великих командах без належної організації.</li>
+    <li>Потребує постійного моніторингу для забезпечення оптимальної роботи.</li>
+</ul>
+
+<figure>
+    <img src="https://miro.medium.com/v2/resize:fit:1083/1*T8urfVVVAwlFtM5an-TBJg.png" alt="Схема Kanban">
+    <figcaption>Схема Kanban</figcaption>
+</figure>
+
+<p><a href="https://ru.wikipedia.org/wiki/Kanban" target="_blank">Докладніше про Kanban</a></p>
 
 ### Lean
 
