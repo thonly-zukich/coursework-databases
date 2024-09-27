@@ -43,25 +43,25 @@
             <p>Життєвий цикл розробки програмного забезпечення (Software Development Life Cycle - SDLC) — це процес створення ПЗ, який охоплює всі етапи, від початкового задуму до підтримки готового продукту. SDLC допомагає організувати розробку програмного забезпечення таким чином, щоб забезпечити якісне виконання проєкту в межах часу, бюджету та вимог.</p>
         </li>
         <li>
-            <strong> основні етапи</strong>
-            <p>Основні етапи SDLC включають:</p>
+            <strong>Основні етапи</strong>
+            <p></p>
             <ul>
-                <li>Аналіз вимог</li>
+                <li><strong>Аналіз вимог</strong></li>
                 <p>На даному етапі замовник надає всю необхідну інформацію для розробки продукту відповідно до своїх очікувань. Будь-які неясності вирішуються на цьому етапі. Бізнес-аналітик і керівник проєкту зустрічаються із замовником, щоб з'ясувати, що потрібно створити, хто кінцевий користувач, та яка мета продукту. Після збору вимог створюється документ SRS, який повинен бути зрозумілим для розробників і затвердженим замовником.</p>
-                <li>Проєктування</li>
+                <li><strong>Проєктування</strong></li>
                 <p>На цьому етапі вимоги, зібрані в документі SRS, використовуються як вхідні дані, і визначається архітектура програмного забезпечення, яка використовується для реалізації розробки системи.</p>
-                <li>Розробка</li>
-                <p>розробка починається після того, як розробник отримує проектний документ. Дизайн програмного забезпечення перекладається у вихідний код. На цьому етапі реалізуються всі компоненти програмного забезпечення.</p>
-                <li>Тестування</li>
+                <li><strong>Розробка</strong></li>
+                <p>Розробка починається після того, як розробник отримує проектний документ. Дизайн програмного забезпечення перекладається у вихідний код. На цьому етапі реалізуються всі компоненти програмного забезпечення.</p>
+                <li><strong>Тестування</strong></li>
                 <p>Тестування починається після завершення кодування. Програмне забезпечення тестується, а виявлені дефекти передаються розробникам для виправлення. Тестування триває, доки ПЗ не відповідатиме очікуванням замовника, з використанням документа SRS як стандарту.</p>
-                <li>Впровадження</li>
+                <li><strong>Впровадження</strong></li>
                 <p>Після тестування, його розгортають у виробничому середовищі або проводять перше UAT-тестування (User Acceptance testing), залежно від очікувань замовника</p>
-                <li>Обслуговування та підтримка</li>
+                <li><strong>Обслуговування та підтримка</strong></li>
                 <p>Після розгортання продукту у виробничому середовищі, підтримка продукту, тобто, якщо виникає якась проблема, яку потрібно виправити, або якщо потрібно зробити якесь покращення, здійснюється розробниками.</p>
             </ul>
         </li>
-        <li><a href="https://www.maxzosim.com/content/images/2023/05/image-18.png">Фази життєвого циклу розробки програмного забезпечення</a></li>
         <p> <img src="https://www.maxzosim.com/content/images/2023/05/image-18.png"></p>
+        <p><a href="https://www.maxzosim.com/content/images/2023/05/image-18.png">Схема фаз життєвого циклу розробки програмного забезпечення</a></p>
  </ol>
  
 
@@ -81,16 +81,16 @@
         <li>Велика кількість документації збільшує час на узгодження</li>
     </ul> 
     <p><img src="https://itexpert.work/wp-content/webp-express/webp-images/uploads/2022/06/kaskadna-model.jpg.webp" width="600px"></p>
-    <p><a href="https://images.app.goo.gl/K6vdCS7QUMwftzabA">посилання на схему</a></p>
+    <p><a href="https://images.app.goo.gl/K6vdCS7QUMwftzabA">Схема Waterfall</a></p>
     
       
 
 
-## Agile
+### Agile
 
 **Agile** — це методологія управління проектами, яка акцентує увагу на співпраці, гнучкості та ітеративному розвитку. Основні принципи були вперше викладені в "Agile Manifesto" у 2001 році, і головною метою є підвищення ефективності команд через пріоритет взаємодії між людьми, працюючим продуктом та гнучкістю до змін.
 
-### Основні принципи:
+<h4>Основні принципи:</h4>
 
 1. **Люди важливіші за процеси та інструменти**  
    Взаємодія та командна робота є пріоритетом, інструменти — лише засіб для досягнення мети.
@@ -104,7 +104,7 @@
 4. **Готовність до змін важливіша за дотримання плану**  
    Команди повинні бути гнучкими та адаптуватися до змін на будь-якому етапі проекту.
 
-### Переваги Agile:
+<h4>Переваги Agile:</h4>
 
 - **Клієнтська спрямованість**  
   Активна участь клієнта у процесі допомагає уникнути ризиків та полегшує прийняття рішень.
@@ -118,7 +118,7 @@
 - **Покращена комунікація**  
   Постійний зворотний зв'язок забезпечує кращу координацію в команді.
 
-### Недоліки Agile:
+<h4>Недоліки Agile:</h4>
 
 - **Додаткові вимоги до команди**  
   Необхідна висока кваліфікація, мотивація та самодисципліна учасників.
@@ -129,7 +129,8 @@
 - **Складність управління великими проектами**  
   У масштабних проектах управління може стати складнішим і вимагати більше ресурсів та часу.
 
-### Traditional vs Agile
+<h4>Traditional vs Agile</h4>
+
 ![Traditional vs Agile](https://www.kpipartners.com/hs-fs/hubfs/Imported_Blog_Media/traditional-vs-agile-1.png?width=800&name=traditional-vs-agile-1.png)
 <div>
   <p>Схема Traditional vs Agile <a href="https://www.kpipartners.com/hs-fs/hubfs/Imported_Blog_Media/traditional-vs-agile-1.png?width=800&name=traditional-vs-agile-1.png">[6]</a></p>
@@ -155,8 +156,9 @@
 
 <figure>
     <img src="https://miro.medium.com/v2/resize:fit:1083/1*h9iv87c9Lp5aGksmSrRB5g.png" alt="Схема Scrum">
-    <figcaption>Схема Scrum</figcaption>
 </figure>
+
+<p><a href="https://miro.medium.com/v2/resize:fit:1083/1*h9iv87c9Lp5aGksmSrRB5g.png">Схема Scrum</a></p>
 
 <p><a href="https://ru.wikipedia.org/wiki/Scrum" target="_blank">Докладніше про Scrum</a></p>
 
@@ -180,8 +182,9 @@
 
 <figure>
     <img src="https://miro.medium.com/v2/resize:fit:1083/1*T8urfVVVAwlFtM5an-TBJg.png" alt="Схема Kanban">
-    <figcaption>Схема Kanban</figcaption>
 </figure>
+
+<p><a href="https://miro.medium.com/v2/resize:fit:1083/1*T8urfVVVAwlFtM5an-TBJg.png">Схема Kanban</a></p>
 
 <p><a href="https://ru.wikipedia.org/wiki/Kanban" target="_blank">Докладніше про Kanban</a></p>
 
@@ -341,12 +344,12 @@ RAD (Rapid Application Development) — це методологія розроб
             <th class="our-project">SigmaTasking (Наш Проєкт)</th>
             <th class="project-1">GitHub Projects</th>
             <th class="project-2">Notion</th>
-            <th class="project-3">JIRA</th>
-            <th class="project-4">Asana</th>
-            <th class="project-5">Nifty</th>
-            <th class="project-6">Microsoft Project</th>
-            <th class="project-7">Click Up</th>
-            <th class="project-8">Monday.com</th> 
+            <th class="project-3">Trello</th>
+            <th class="project-4">JIRA</th>
+            <th class="project-5">Asana</th>
+            <th class="project-6">Nifty</th>
+            <th class="project-7">Microsoft Project</th>
+            <th class="project-8">Click Up</th>
         </tr>
     </thead>
     <tbody>
@@ -366,9 +369,9 @@ RAD (Rapid Application Development) — це методологія розроб
             <td class="project-8">-</td>
         </tr>
         -->
-            <td class="requirements" rowspan=6>Functionality (функціональність)</td>
-            <th class="criteria">Кросплатформеність</th>
-    <td class="our-project">✖</td>
+            <td class="requirements" rowspan=6><strong>Functionality (функціональність)</strong></td>
+            <td class="criteria"><strong>Кросплатформеність</strong></th>
+    <td class="our-project">✔</td>
     <td class="project-1">✔</td>
     <td class="project-2">✔</td>
     <td class="project-3">✔</td>
@@ -379,7 +382,7 @@ RAD (Rapid Application Development) — це методологія розроб
     <td class="project-8">✔</td>
 </tr>
 <tr>
-    <th class="criteria">Мобільна версія</th>
+    <td class="criteria"><strong>Мобільна версія</strong></th>
     <td class="our-project">✖</td>
     <td class="project-1">✖</td>
     <td class="project-2">✔</td>
@@ -391,8 +394,8 @@ RAD (Rapid Application Development) — це методологія розроб
     <td class="project-8">✔</td>
 </tr>
 <tr>
-    <th class="criteria">Наявність API</th>
-    <td class="our-project">✖</td>
+    <td class="criteria"><strong>Наявність API</strong></th>
+    <td class="our-project">✔</td>
     <td class="project-1">✔</td>
     <td class="project-2">✖</td>
     <td class="project-3">✖</td>
@@ -403,8 +406,8 @@ RAD (Rapid Application Development) — це методологія розроб
     <td class="project-8">✔</td>
 </tr>
 <tr>
-    <th class="criteria">Офлайн-доступ</th>
-    <td class="our-project">✖</td>
+    <td class="criteria"><strong>Офлайн-доступ</strong></th>
+    <td class="our-project">✔</td>
     <td class="project-1">✖</td>
     <td class="project-2">✖</td>
     <td class="project-3">✖</td>
@@ -415,7 +418,7 @@ RAD (Rapid Application Development) — це методологія розроб
     <td class="project-8">✔</td>
 </tr>
 <tr>
-    <th class="criteria">Миттєві повідомлення (чат)</th>
+    <td class="criteria"><strong>Миттєві повідомлення (чат)</strong></th>
     <td class="our-project">✖</td>
     <td class="project-1">✖</td>
     <td class="project-2">✔</td>
@@ -427,8 +430,8 @@ RAD (Rapid Application Development) — це методологія розроб
     <td class="project-8">✔</td>
 </tr>
 <tr>
-    <th class="criteria">Призначення завдань учасникам</th>
-    <td class="our-project">✖</td>
+    <td class="criteria"><strong>Призначення завдань учасникам</strong></td>
+    <td class="our-project">✔</td>
     <td class="project-1">✔</td>
     <td class="project-2">✔</td>
     <td class="project-3">✔</td>
@@ -439,79 +442,6 @@ RAD (Rapid Application Development) — це методологія розроб
     <td class="project-8">✔</td>
 </tr>
         <!-- new requirement -->
-        <tr>
-            <td class="requirements" rowspan=6>Reliability (надійність)</td>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
  <tr>
     <td class="Вимоги" rowspan=5><strong>Usability (зручність роботи)</strong></td>
     <td class="Критерії"><strong>User-friendly interface</strong></td>
@@ -649,87 +579,75 @@ RAD (Rapid Application Development) — це методологія розроб
 </tr>
         <!-- new requirement -->
         <tr>
-            <td class="requirements" rowspan=6>Performance (продуктивність)</td>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="requirements" rowspan=6><strong>Performance (продуктивність)</strong></td>
+            <td class="criteria"><strong>Швидкість завантаження та відгуку</strong></td>
+            <td class="our-project">✔</td>
+            <td class="Github Projects">&#10004;</td>
+            <td class="Notion">&#10004;</td>
+            <td class="Trello">&#10004;</td>
+            <td class="JIRA">&#10004;</td>
+            <td class="Asana">&#10004;</td>
+            <td class="Nift">&#10004;</td>
+            <td class="Microsoft Project">&#10004;</td>
+            <td class="Click Up">&#10004;</td>
         </tr>
         <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="criteria"><strong>Робота з великими обсягами даних</strong></td>
+            <td class="our-project">✔</td>
+            <td class="Github Projects">&#10004;</td>
+            <td class="Notion">&#10004;</td>
+            <td class="Trello">&#10004;</td>
+            <td class="JIRA">&#10004;</td>
+            <td class="Asana">&#10004;</td>
+            <td class="Nift">&#10004;</td>
+            <td class="Microsoft Project">&#10004;</td>
+            <td class="Click Up">&#10004;</td>
         </tr>
         <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="criteria"><strong>Оптимізація ресурсів</strong></td>
+            <td class="our-project">✔</td>
+            <td class="Github Projects">&#10004;</td>
+            <td class="Notion">&#10004;</td>
+            <td class="Trello">&#10004;</td>
+            <td class="JIRA">&#10004;</td>
+            <td class="Asana">&#10004;</td>
+            <td class="Nift">✖</td>
+            <td class="Microsoft Project">&#10004;</td>
+            <td class="Click Up">✖</td>
         </tr>
         <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="criteria"><strong>Робота в реальному часі</strong></td>
+            <td class="our-project">✔</td>
+            <td class="Github Projects">&#10004;</td>
+            <td class="Notion">&#10004;</td>
+            <td class="Trello">&#10004;</td>
+            <td class="JIRA">&#10004;</td>
+            <td class="Asana">&#10004;</td>
+            <td class="Nift">&#10004;</td>
+            <td class="Microsoft Project">&#10004;</td>
+            <td class="Click Up">&#10004;</td>
         </tr>
         <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
-        </tr>
-        <tr>
-            <td class="criteria">-</td>
-            <td class="our-project">-</td>
-            <td class="project-1">-</td>
-            <td class="project-2">-</td>
-            <td class="project-3">-</td>
-            <td class="project-4">-</td>
-            <td class="project-5">-</td>
-            <td class="project-6">-</td>
-            <td class="project-7">-</td>
-            <td class="project-8">-</td>
+            <td class="criteria"><strong>Відмовостійкість</strong></td>
+            <td class="our-project">✔</td>
+            <td class="Github Projects">&#10004;</td>
+            <td class="Notion">&#10004;</td>
+            <td class="Trello">&#10004;</td>
+            <td class="JIRA">&#10004;</td>
+            <td class="Asana">&#10004;</td>
+            <td class="Nift">&#10004;</td>
+            <td class="Microsoft Project">&#10004;</td>
+            <td class="Click Up">&#10004;</td>
         </tr>
         <!-- new requirement -->
         <tr>
            <tr>
-            <td class="requirements" rowspan=6>Supportability (підтримка)</td>
+            <td class="requirements" rowspan=6><strong>Supportability (підтримка)</strong></td>
             <th class="criteria"><strong>Документація</strong></th>
-            <td class="our-project">✖</td>
+            <td class="our-project">✔</td>
             <td class="project-1">✔</td>
             <td class="project-2">✔</td>
-            <td class="project-3">✖</td>
+            <td class="project-3">✔</td>
             <td class="project-4">✔</td>
             <td class="project-5">✔</td>
             <td class="project-6">✔</td>
@@ -738,10 +656,10 @@ RAD (Rapid Application Development) — це методологія розроб
         </tr>
         <tr>
             <td class="criteria"><strong>Технічна підтримка</strong></td>
-            <td class="our-project">✖</td>
+            <td class="our-project">✔</td>
             <td class="project-1">✖</td>
             <td class="project-2">✔</td>
-            <td class="project-3">✖</td>
+            <td class="project-3">✔</td>
             <td class="project-4">✔</td>
             <td class="project-5">✔</td>
             <td class="project-6">✔</td>
@@ -750,10 +668,10 @@ RAD (Rapid Application Development) — це методологія розроб
         </tr>
         <tr>
             <td class="criteria"><strong>Форум/спільнота</strong></td>
-            <td class="our-project">✖</td>
+            <td class="our-project">✔</td>
             <td class="project-1">✖</td>
             <td class="project-2">✔</td>
-            <td class="project-3">✖</td>
+            <td class="project-3">✔</td>
             <td class="project-4">✔</td>
             <td class="project-5">✔</td>
             <td class="project-6">✔</td>
@@ -765,7 +683,7 @@ RAD (Rapid Application Development) — це методологія розроб
             <td class="our-project">✖</td>
             <td class="project-1">✖</td>
             <td class="project-2">✔</td>
-            <td class="project-3">✖</td>
+            <td class="project-3">✔</td>
             <td class="project-4">✖</td>
             <td class="project-5">✔</td>
             <td class="project-6">✔</td>
@@ -774,7 +692,7 @@ RAD (Rapid Application Development) — це методологія розроб
         </tr>
         <tr>
             <td class="criteria"><strong>Часті оновлення</strong></td>
-            <td class="our-project">✖</td>
+            <td class="our-project">✔</td>
             <td class="project-1">✔</td>
             <td class="project-2">✔</td>
             <td class="project-3">✔</td>
@@ -786,10 +704,10 @@ RAD (Rapid Application Development) — це методологія розроб
         </tr>
         <tr>
             <td class="criteria"><strong>Наявність FAQ</strong></td>
-            <td class="our-project">✖</td>
+            <td class="our-project">✔</td>
             <td class="project-1">✔</td>
             <td class="project-2">✔</td>
-            <td class="project-3">✖</td>
+            <td class="project-3">✔</td>
             <td class="project-4">✔</td>
             <td class="project-5">✔</td>
             <td class="project-6">✔</td>
@@ -811,4 +729,30 @@ RAD (Rapid Application Development) — це методологія розроб
 
 ## Посилання
 
-*[Розділ містить повний список всіх документів, про які згадується.]*
+1. [Система управління проєктами (Project management software, PMS)](https://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%96%D0%BD%D0%BD%D1%8F_%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D0%B0%D0%BC%D0%B8)
+2. [Проєкт (Project)](https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%94%D0%BA%D1%82)
+3. [Методологія Agile (Agile Methodology)](https://brainrain.com.ua/uk/chto-takoe-agile-ua/)
+4. [Етапи проєкту (Project Phases)](https://flexi-project.com/uk/4-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%96-%D0%B5%D1%82%D0%B0%D0%BF%D0%B8-%D1%80%D0%B5%D0%B0%D0%BB%D1%96%D0%B7%D0%B0%D1%86%D1%96%D1%97-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%83/)
+5. [Ризики проєкту (Project Risks)](https://pmb.com.ua/uk/slovar-terminov/upravlenie-riskami-proekta-project-risk-management/)
+6. [Ресурси проєкту (Project Resources)](https://pmtips.com.ua/post/proektni-resursi)
+7. [Артефакт (Artifact)](https://uk.wikipedia.org/wiki/%D0%90%D1%80%D1%82%D0%B5%D1%84%D0%B0%D0%BA%D1%82)
+8. [Контроль версій (Version control)](https://uk.wikibooks.org/wiki/Pro_GIT/%D0%92%D1%81%D1%82%D1%83%D0%BF/%D0%9F%D1%80%D0%BE_%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C_%D0%B2%D0%B5%D1%80%D1%81%D1%96%D0%B9)
+9. [Фази життєвого циклу розробки програмного забезпечення (Схема)](https://www.maxzosim.com/content/images/2023/05/image-18.png)
+10. [Waterfall (Схема)](https://images.app.goo.gl/K6vdCS7QUMwftzabA)
+11. [Traditional vs Agile (Схема)](https://www.kpipartners.com/hs-fs/hubfs/Imported_Blog_Media/traditional-vs-agile-1.png?width=800&name=traditional-vs-agile-1.png)
+12. [Scrum (Схема)](https://miro.medium.com/v2/resize:fit:1083/1*h9iv87c9Lp5aGksmSrRB5g.png)
+13. [Докладніше про Scrum](https://ru.wikipedia.org/wiki/Scrum)
+14. [Kanban (Схема)](https://miro.medium.com/v2/resize:fit:1083/1*T8urfVVVAwlFtM5an-TBJg.png)
+15. [Докладніше про Kanban](https://ru.wikipedia.org/wiki/Kanban)
+16. [Lean (Схема)](https://lean.org.ua/olean)
+17. [Спіральна модель (Схема)](https://www.maxzosim.com/content/images/size/w1600/2023/02/image-112.png)
+18. [RAD (Схема)](https://maybe.works/media/blogs/rapid-application-development-rad/1100x600.jpg)
+19. [DevOps (Схема)](https://img.freepik.com/premium-vector/devops-scheme-software-development-lifecycle-operations-concept-software-engineering-workflow-cycle-vector-illustration-devops-software-development-process_229548-2380.jpg)
+20. [Notion](https://www.notion.so/)
+21. [ClickUp](https://clickup.com/)
+22. [GitHub Projects](https://github.com/features/project-management)
+23. [Trello](https://trello.com/)
+24. [JIRA](https://www.atlassian.com/software/jira)
+25. [Asana](https://asana.com/)
+26. [Nifty](https://niftypm.com/)
+27. [Microsoft Project](https://www.microsoft.com/en-us/microsoft-365/project/project-management-software)
