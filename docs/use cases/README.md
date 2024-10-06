@@ -147,3 +147,90 @@
 
 </center>
 
+
+## Загальна схема
+
+<center>
+
+@startuml
+
+:Користувач: as User
+:Керівник проєкту: as Leader
+:Адміністратор: as Admin
+
+usecase "<b>UserManage</b>\nКерувати користувачем" as UserManage
+usecase "<b>TaskManage</b>\nКерувати задачами" as TaskManage
+usecase "<b>SupportWrite</b>\nНаписати в підтримку" as SupportWrite
+usecase "<b>ProjectManage</b>\nКерувати проєктом" as ProjectManage
+usecase "<b>TeamManage</b>\nКерувати командою" as TeamManage
+usecase "<b>BoardManage</b>\nКерувати дошкою" as BoardManage
+usecase "<b>SupportAnswer</b>\nВідповісти в підтримці" as SupportAnswer
+usecase "<b>SystemManage</b>\nКерувати системою" as SystemManage
+
+User -up-> UserManage
+User -left-> TaskManage
+User -right-> SupportWrite
+
+User <|-- Leader
+
+Leader -left-> ProjectManage
+Leader -right-> TeamManage
+Leader -down-> BoardManage
+
+Leader <|-- Admin
+
+Admin -down-> SupportAnswer
+Admin -down-> SystemManage
+
+@enduml
+
+</center>
+
+## Користувач
+
+Розширена схема сценаріїв використання для користувача
+
+## Керівник проєкту
+
+Розширена схема сценаріїв використання для керівника проєкту
+
+## Адміністратор
+
+Розширена схема сценаріїв використання для адміністратора
+
+
+## Сценарії використання
+
+В діаграмі діяльності має бути алгоритм виконання сценарію використання (див. "Основний сценарій" у характеристиці бізнес-процесів)  
+
+Шаблон для таблиці:
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>
+            <code>
+            </code>
+        </th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td></td>
+    </tr>
+</table>
