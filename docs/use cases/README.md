@@ -150,7 +150,12 @@
 
 ## Загальна схема
 
-<center>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
 
 @startuml
 
@@ -188,15 +193,119 @@ Admin -down-> SystemManage
 
 ## Користувач
 
-Розширена схема сценаріїв використання для користувача
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+:Користувач: as User
+
+usecase "<b>UserManage</b>\nКерувати користувачем" as UserManage
+usecase "<b>TaskManage</b>\nКерувати задачами" as TaskManage
+usecase "<b>SupportWrite</b>\nНаписати в підтримку" as SupportWrite
+usecase "<b>UserCreate</b>\nЗареєструватись" as UserCreate
+usecase "<b>UserAuthorize</b>\nАвторизуватись" as UserAuthorize
+usecase "<b>UserEdit</b>\nРедагувати користувача" as UserEdit
+usecase "<b>UserDelete</b>\nВидалити користувача" as UserEdit
+usecase "<b>TaskCreate</b>\nСтворити задачу" as TaskCreate
+usecase "<b>TaskEdit</b>\nРедагувати задачу" as TaskEdit
+usecase "<b>TaskDelete</b>\nВидалити задачу" as TaskDelete
+usecase "<b>TaskSort</b>\nВідсортувати задачі" as TaskSort
+
+User -up-> UserManage
+User -left-> TaskManage
+User -right-> SupportWrite
+
+TaskCreate .up.> TaskManage : extends
+TaskEdit .right.> TaskManage : extends
+TaskDelete .up.> TaskManage : extends
+TaskSort .down.> TaskManage : extends
+
+UserCreate .down.> UserManage : extends
+UserAuthorize .down.> UserManage : extends
+UserEdit .down.> UserManage : extends
+
+
+@enduml
+
+</center>
 
 ## Керівник проєкту
 
-Розширена схема сценаріїв використання для керівника проєкту
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+:Керівник проєкту: as Leader
+
+usecase "<b>ProjectManage</b>\nКерувати проєктом" as ProjectManage
+usecase "<b>TeamManage</b>\nКерувати командою" as TeamManage
+usecase "<b>BoardManage</b>\nКерувати дошкою" as BoardManage
+usecase "<b>ProjectCreate</b>\nСтворити проєкт" as ProjectCreate
+usecase "<b>ProjectEdit</b>\nРедагувати проєкт" as ProjectEdit
+usecase "<b>ProjectDelete</b>\nВидалити проєкт" as ProjectDelete
+usecase "<b>MemberAdd</b>\nДодати учасника" as MemberAdd
+usecase "<b>MemberRemove</b>\nВидалити учасника" as MemberRemove
+usecase "<b>BoardCreate</b>\nСтворити дошку" as BoardCreate
+usecase "<b>BoardEdit</b>\nРедагувати дошку" as BoardEdit
+usecase "<b>BoardDelete</b>\nВидалити дошку" as BoardDelete
+
+Leader -left-> ProjectManage
+Leader -right-> TeamManage
+Leader -down-> BoardManage
+
+ProjectCreate .right.> ProjectManage : extends
+ProjectEdit .down.> ProjectManage : extends
+ProjectDelete .up.> ProjectManage : extends
+
+MemberAdd .up.> TeamManage : extends
+MemberRemove .down.> TeamManage : extends
+
+BoardCreate .up.> BoardManage : extends
+BoardEdit .up.> BoardManage : extends
+BoardDelete .up.> BoardManage : extends
+
+
+@enduml
+
+</center>
 
 ## Адміністратор
 
-Розширена схема сценаріїв використання для адміністратора
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+:Адміністратор: as Admin
+
+usecase "<b>SupportAnswer</b>\nВідповісти в підтримці" as SupportAnswer
+usecase "<b>SystemManage</b>\nКерувати системою" as SystemManage
+usecase "<b>UserBan</b>\nЗаборонити користувача" as UserBan
+usecase "<b>UserUnban</b>\nДозволити користувача" as UserUnban
+
+Admin -down-> SupportAnswer
+Admin -down-> SystemManage
+
+UserBan .up.> SystemManage : extends
+UserUnban .up.> SystemManage : extends
+
+@enduml
+
+</center>
 
 
 ## Сценарії використання
