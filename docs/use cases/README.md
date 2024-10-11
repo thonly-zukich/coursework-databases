@@ -343,3 +343,279 @@ UserUnban .up.> SystemManage : extends
         <td></td>
     </tr>
 </table>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="CreateTask"><code>CreateTask</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Створити задачу</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на редагування проєкту</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система створює задачу</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Користувач не ввів назву задачі (NullTaskNameException)</li>
+                <li>Користувач ввів назву задачі у неправильному форматі (InvalidTaskNameException)</li>
+                <li>Користувач має недостатньо прав для створення задачі (AccessDeniedException)</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач| 
+start; 
+:Обирає проєкт і натискає на кнопку\n"Створити задачу";
+
+|Система| 
+:Відкриває форму із полями\nінформації про задачу;
+
+|Користувач| 
+:Заповнює поля інформації про задачу:\nвказує назву, дедлайн, виконавця, статус,\nтеги, додає файли; 
+:Натискає кнопку "Створити";
+
+|Система| 
+:Перевіряє на валідність інформацію про задачу;
+note right #ffaaaa
+<b>Можлива
+<b> NoEssentialDataException
+end note
+
+
+|Користувач| 
+stop;
+
+@enduml
+
+
+</center>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="EditTask"><code>EditTask</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Редагувати задачу</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на редагування задачі</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система змінює дані задачі</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла задачу (TaskNotFoundException)</li>
+                <li>Користувач має недостатньо прав для редагування (AccessDeniedException)</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач| 
+start; 
+:Обирає задачу і натискає на кнопку\n"Редагувати";
+
+|Система| 
+:Відкриває форму із полями\nінформації про задачу;
+
+|Користувач| 
+:Заповнює поля інформації про задачу:\nвказує назву, дедлайн, виконавця, статус,\nтеги, додає файли; 
+:Натискає кнопку "Редагувати";
+note right #ffaaaa
+<b>Можлива
+<b>TaskNotFoundException
+end note
+
+|Система| 
+:Перевіряє на валідність інформацію про задачу; 
+note right #ffaaaa
+<b>Можлива
+<b>NoEssentialDataException
+end note
+
+:Зберігає зміни у базі даних;
+
+|Користувач| 
+stop;
+
+@enduml
+
+</center>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="DeleteTask"><code>DeleteTask</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Видалити задачу</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на видалення задачі</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система видаляє задачу</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла задачу (TaskNotFoundException)</li>
+                <li>Користувач має недостатньо прав для видалення (AccessDeniedException)</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач| 
+start; 
+:Обирає задачу і натискає на кнопку\n"Видалити";
+
+|Система| 
+:Перевіряє права на видалення задачі;
+note right #ffaaaa
+<b>Можлива
+<b>InsufficientPermissionsException
+end note
+:Видаляє задачу з бази даних;
+
+|Користувач| 
+stop;
+
+@enduml
+
+</center>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="SortTasks"><code>SortTasks</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Відсортувати задачі</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач є учасником проєкту</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система відсортовує список задач</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла задачі (TasksNotFoundException)</li>
+                <li>Користувач не є учасником проєкту (UserNotProjectMemberException)</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач| 
+start; 
+:Обирає список задач і натискає на кнопку\n"Відсортувати";
+
+|Система| 
+:Перевіряє користувача на причасність до проєкту;
+note right #ffaaaa
+<b>Можлива
+<b>UserNotProjectMemberException
+end note
+|Система| 
+:Відсортує список задач;
+
+|Користувач| 
+stop;
+
+@enduml
+
+</center>
