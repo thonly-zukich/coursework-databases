@@ -939,3 +939,232 @@ stop;
 @enduml
 
 </center>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="CreateBoard"><code>CreateBoard</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Створити дошку</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на створення дошки</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система створює дошку</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Користувач не ввів назву дошки (NullInstanceException)</li>
+                <li>Користувач ввів недопустиму назву дошки (InvalidBoardNameException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач натискає кнопку "Створити дошку".</li>
+                <li>Користувач вводить назву дошки (можливе NullInstanceException).</li>
+                <li>Система перевіряє введені дані (можливе InvalidBoardNameException).</li>
+                <li>Система створює нову дошку.</li>
+                <li>Користувач отримує доступ до дошки.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+|Користувач (керівник проєкту)|
+start;
+: Натискає кнопку "Створити дошку";
+: Вводить назву дошки;
+
+|Система|
+: Перевіряє введені дані;
+note right #ffaaaa
+<b> Можливі виключення:
+<b> NullInstanceException
+<b> InvalidBoardNameException
+end note
+: Створює нову дошку;
+
+|Користувач|
+: Отримує доступ до дошки;
+stop;
+@enduml
+
+</center>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="EditBoard"><code>EditBoard</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Редагувати дошку</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на редагування дошки</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система оновила дані дошки</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла дошку (BoardNotFoundException)</li>
+                <li>Користувач має недостатньо прав для редагування (AccessDeniedException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває дошку.</li>
+                <li>Користувач натискає кнопку "Редагувати".</li>
+                <li>Користувач вносить зміни.</li>
+                <li>Система перевіряє права на редагування (можливе AccessDeniedException).</li>
+                <li>Система зберігає зміни.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+|Користувач (керівник проєкту)|
+start;
+: Відкриває дошку;
+: Натискає кнопку "Редагувати";
+: Вносить зміни;
+
+|Система|
+: Перевіряє права на редагування;
+note right #ffaaaa
+<b> Можливі виключення:
+<b> AccessDeniedException
+<b> BoardNotFoundException
+end note
+: Зберігає зміни;
+
+|Користувач|
+: Отримує оновлену дошку;
+stop;
+@enduml
+
+</center>
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="DeleteBoard"><code>DeleteBoard</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Видалити дошку (Delete Board)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на видалення дошки</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система видаляє дошку</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла дошку (BoardNotFoundException)</li>
+                <li>Користувач має недостатньо прав для видалення (AccessDeniedException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває дошку.</li>
+                <li>Користувач натискає кнопку "Видалити".</li>
+                <li>Система перевіряє права на видалення (можливе AccessDeniedException).</li>
+                <li>Система видаляє дошку.</li>
+                <li>Користувач отримує підтвердження про успішне видалення.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+|Користувач (керівник проєкту)|
+start;
+: Відкриває дошку;
+: Натискає кнопку "Видалити";
+
+|Система|
+: Перевіряє права на видалення;
+note right #ffaaaa
+<b> Можливі виключення:
+<b> AccessDeniedException
+<b> BoardNotFoundException
+end note
+: Видаляє дошку;
+
+|Користувач|
+: Отримує підтвердження про видалення;
+stop;
+@enduml
+
+</center>
