@@ -1007,6 +1007,207 @@ stop
 @enduml
 </center>
 
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="CreateProject"><code>CreateProject</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Створити проект</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач авторизований</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система створює новий проект</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Користувач не ввів назву проекту (NullProjectNameException)</li>
+                <li>Користувач ввів неправильний формат назви (InvalidProjectNameException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач натискає "Створити проект".</li>
+                <li>Користувач заповнює необхідні поля для створення проекту.</li>
+                <li>Користувач натискає кнопку "Створити".</li>
+                <li>Система перевіряє дані.</li>
+                <li>Система створює новий проект.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+@startuml
+
+|Користувач|
+start;
+: Натискає "Створити проект";
+
+: Заповнює поля проекту;
+
+: Натискає "Створити";
+
+|Система|
+: Перевіряє дані проекту;
+
+note right #ffaaaa
+<b> Можливі виключення:
+<b> NullProjectNameException
+<b> InvalidProjectNameException
+end note
+
+: Створює новий проект;
+
+stop;
+@enduml
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="EditProject"><code>EditProject</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Редагувати проект</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач є учасником проекту</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Проект успішно змінений</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Користувач не має прав на редагування проекту (InsufficientPermissionsException)</li>
+                <li>Невірний формат даних (InvalidDataFormatException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває проект для редагування.</li>
+                <li>Користувач змінює потрібні поля.</li>
+                <li>Користувач натискає "Зберегти".</li>
+                <li>Система перевіряє права доступу.</li>
+                <li>Система зберігає зміни.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+@startuml
+
+|Користувач|
+start;
+: Відкриває проект для редагування;
+
+: Змінює поля проекту;
+
+: Натискає "Зберегти";
+
+|Система|
+: Перевіряє права доступу;
+
+note right #ffaaaa
+<b> Можливі виключення:
+<b> InsufficientPermissionsException
+<b> InvalidDataFormatException
+end note
+
+: Зберігає зміни проекту;
+
+stop;
+@enduml
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="DeleteProject"><code>DeleteProject</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Видалити проект</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач має права на видалення проекту</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система видаляє проект</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Користувач не має прав на видалення проекту (InsufficientPermissionsException)</li>
+                <li>Проект не знайдено (ProjectNotFoundException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває проект для видалення.</li>
+                <li>Користувач натискає "Видалити".</li>
+                <li>Система перевіряє права користувача.</li>
+                <li>Система видаляє проект.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+@startuml
+
+|Користувач|
+start;
+: Відкриває проект для видалення;
+
+: Натискає "Видалити";
+
+|Система|
+: Перевіряє права користувача;
+
+note right #ffaaaa
+<b> Можливі виключення:
+<b> InsufficientPermissionsException
+<b> ProjectNotFoundException
+end note
+
+: Видаляє проект;
+
+stop;
+@enduml
+
 
 
 <table>
