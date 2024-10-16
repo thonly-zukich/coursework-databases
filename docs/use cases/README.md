@@ -1,152 +1,5 @@
 # Модель прецедентів
 
-В цьому файлі необхідно перелічити всі документи, розроблені в проекті та дати посилання на них.
-
-*Модель прецедентів повинна містити загальні оглядові діаграми та специфікації прецедентів.*
-
-
-
-Вбудовування зображень діаграм здійснюється з використанням сервісу [plantuml.com](https://plantuml.com/). 
-
-В markdown-файлі використовується опис діаграми
-
-```md
-
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
-
-@startuml
-
-    right header
-        <font size=24 color=black>Package: <b>UCD_3.0
-    end header
-
-    title
-        <font size=18 color=black>UC_8. Редагувати конфігурацію порталу
-        <font size=16 color=black>Діаграма прецедентів
-    end title
-
-
-    actor "Користувач" as User #eeeeaa
-    
-    package UCD_1{
-        usecase "<b>UC_1</b>\nПереглянути список \nзвітів" as UC_1 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1</b>\nЗастосувати фільтр" as UC_1.1
-    usecase "<b>UC_1.2</b>\nПереглянути метадані \nзвіту" as UC_1.2  
-    usecase "<b>UC_1.2.1</b>\nДати оцінку звіту" as UC_1.2.1  
-    usecase "<b>UC_1.2.2</b>\nПереглянути інформацію \nпро авторів звіту" as UC_1.2.2
-    
-    package UCD_1 {
-        usecase "<b>UC_4</b>\nВикликати звіт" as UC_4 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1.1</b>\n Використати \nпошукові теги" as UC_1.1.1  
-    usecase "<b>UC_1.1.2</b>\n Використати \nрядок пошуку" as UC_1.1.2
-    usecase "<b>UC_1.1.3</b>\n Використати \nавторів" as UC_1.1.3  
-    
-    
-    
-    User -> UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-    UC_4 .d.> UC_1.2 :extends
-    UC_1.2 .> UC_1.2 :extends
-    UC_1.2.1 .u.> UC_1.2 :extends
-    UC_1.2.2 .u.> UC_1.2 :extends
-    UC_1 ..> UC_1.2.2 :extends
-    
-    
-    UC_1.1.1 -u-|> UC_1.1
-    UC_1.1.2 -u-|> UC_1.1
-    UC_1.1.3 -u-|> UC_1.1
-    
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2020
-    end footer
-
-@enduml
-
-**Діаграма прецедентів**
-
-</center>
-```
-
-яка буде відображена наступним чином
-
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
-
-@startuml
-
-    right header
-        <font size=24 color=black>Package: <b>UCD_3.0
-    end header
-
-    title
-        <font size=18 color=black>UC_8. Редагувати конфігурацію порталу
-        <font size=16 color=black>Діаграма прецедентів
-    end title
-
-
-    actor "Користувач" as User #eeeeaa
-    
-    package UCD_1{
-        usecase "<b>UC_1</b>\nПереглянути список \nзвітів" as UC_1 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1</b>\nЗастосувати фільтр" as UC_1.1
-    usecase "<b>UC_1.2</b>\nПереглянути метадані \nзвіту" as UC_1.2  
-    usecase "<b>UC_1.2.1</b>\nДати оцінку звіту" as UC_1.2.1  
-    usecase "<b>UC_1.2.2</b>\nПереглянути інформацію \nпро авторів звіту" as UC_1.2.2
-    
-    package UCD_1 {
-        usecase "<b>UC_4</b>\nВикликати звіт" as UC_4 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1.1</b>\n Використати \nпошукові теги" as UC_1.1.1  
-    usecase "<b>UC_1.1.2</b>\n Використати \nрядок пошуку" as UC_1.1.2
-    usecase "<b>UC_1.1.3</b>\n Використати \nавторів" as UC_1.1.3  
-    
-    
-    
-    User -> UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-    UC_4 .d.> UC_1.2 :extends
-    UC_1.2 .> UC_1.2 :extends
-    UC_1.2.1 .u.> UC_1.2 :extends
-    UC_1.2.2 .u.> UC_1.2 :extends
-    UC_1 ..> UC_1.2.2 :extends
-    
-    
-    UC_1.1.1 -u-|> UC_1.1
-    UC_1.1.2 -u-|> UC_1.1
-    UC_1.1.3 -u-|> UC_1.1
-    
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2020
-    end footer
-
-@enduml
-
-**Діаграма прецедентів**
-
-</center>
-
 
 ## Загальна схема
 
@@ -310,43 +163,6 @@ UserUnban .up.> SystemManage : extends
 
 ## Сценарії використання
 
-В діаграмі діяльності має бути алгоритм виконання сценарію використання (див. "Основний сценарій" у характеристиці бізнес-процесів)  
-
-Шаблон для таблиці:
-
-<table>
-    <tr>
-        <th>ID</th>
-        <th>
-            <code>
-            </code>
-        </th>
-    </tr>
-    <tr>
-        <th>Назва</th>
-        <td></td>
-    </tr>
-    <tr>
-        <th>Учасники</th>
-        <td></td>
-    </tr>
-    <tr>
-        <th>Передумови</th>
-        <td></td>
-    </tr>
-    <tr>
-        <th>Результат</th>
-        <td></td>
-    </tr>
-    <tr>
-        <th>Виключні ситуації</th>
-        <td></td>
-    </tr>
-</table>
-
-Модель прецедентів
-
-Сценарій використання
 
 <table>
     <tr>
@@ -402,7 +218,9 @@ UserUnban .up.> SystemManage : extends
     border: 1px solid #cfd7e6;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;">
+
 @startuml
+
 |Користувач|
 start;
 : Натискає на кнопку "Зареєструватись";
@@ -425,7 +243,9 @@ end note
 |Користувач|
 : Автоматично входить в систему;
 stop;
+
 @enduml
+
 </center>
 
 <table>
@@ -471,12 +291,15 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;">
+
 @startuml
+
 |Користувач|
 start;
 : Вводить ім'я користувача і пароль;
@@ -501,7 +324,9 @@ end note
 : Успішно входить у систему;
 
 stop;
+
 @enduml
+
 </center>
 
 
@@ -555,7 +380,9 @@ stop;
     border: 1px solid #cfd7e6;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;">
+
 @startuml
+
 |Користувач|
 start;
 : Відкриває профіль користувача;
@@ -576,7 +403,9 @@ note right #ffaaaa
 end note
 : Зберігає оновлені дані користувача;
 stop;
+
 @enduml
+
 </center>
 
 <table>
@@ -628,9 +457,8 @@ stop;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;"
 >
+
 @startuml
-
-
 
 |Адміністратор|
 start;
@@ -654,15 +482,11 @@ note right #ffaaaa
 end note
 
 stop;
+
 @enduml
+
 </center>
 
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
 <table>
     <tr>
         <th>ID</th>
@@ -700,6 +524,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -733,9 +558,7 @@ stop;
 
 @enduml
 
-
 </center>
-
 
 <table>
     <tr>
@@ -773,6 +596,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -812,6 +636,7 @@ stop;
 @enduml
 
 </center>
+
 <table>
     <tr>
         <th>ID</th>
@@ -848,6 +673,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -875,6 +701,7 @@ stop;
 @enduml
 
 </center>
+
 <table>
     <tr>
         <th>ID</th>
@@ -911,6 +738,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -987,7 +815,9 @@ stop;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;"
 >
+
 @startuml
+
 |Користувач|
 start
 :Відкриває форму для зв'язку зі службою підтримки;
@@ -1004,7 +834,9 @@ end note
 |Користувач|
 :Отримує підтвердження про відправлення повідомлення;
 stop
+
 @enduml
+
 </center>
 
 <table>
@@ -1051,6 +883,13 @@ stop
     </tr>
 </table>
 
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
 @startuml
 
 |Користувач|
@@ -1073,7 +912,10 @@ end note
 : Створює новий проект;
 
 stop;
+
 @enduml
+
+</center>
 
 <table>
     <tr>
@@ -1119,6 +961,13 @@ stop;
     </tr>
 </table>
 
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
 @startuml
 
 |Користувач|
@@ -1141,7 +990,10 @@ end note
 : Зберігає зміни проекту;
 
 stop;
+
 @enduml
+
+</center>
 
 <table>
     <tr>
@@ -1186,6 +1038,13 @@ stop;
     </tr>
 </table>
 
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
 @startuml
 
 |Користувач|
@@ -1206,7 +1065,10 @@ end note
 : Видаляє проект;
 
 stop;
+
 @enduml
+
+</center>
 
 
 
@@ -1259,13 +1121,16 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;"
 >
+
 @startuml
+
 |Користувач (керівник проєкту)|
 start
 :Відкриває проект;
@@ -1285,8 +1150,8 @@ end note
 |Користувач|
 :Отримує підтвердження про успішне додавання учасника;
 stop
-@enduml
 
+@enduml
 
 </center>
 
@@ -1349,6 +1214,7 @@ stop
 >
 
 @startuml
+
 |Користувач (керівник проєкту)|
 start
 :Відкриває проект;
@@ -1368,10 +1234,8 @@ end note
 |Користувач|
 :Отримує підтвердження про успішне видалення учасника;
 stop
+
 @enduml
-
-
-
 
 </center>
 
@@ -1425,6 +1289,7 @@ stop
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -1433,6 +1298,7 @@ stop
 >
 
 @startuml
+
 |Користувач (керівник проєкту)|
 start;
 : Натискає кнопку "Створити дошку";
@@ -1450,9 +1316,11 @@ end note
 |Користувач|
 : Отримує доступ до дошки;
 stop;
+
 @enduml
 
 </center>
+
 <table>
     <tr>
         <th>ID</th>
@@ -1501,6 +1369,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -1509,6 +1378,7 @@ stop;
 >
 
 @startuml
+
 |Користувач (керівник проєкту)|
 start;
 : Відкриває дошку;
@@ -1527,9 +1397,11 @@ end note
 |Користувач|
 : Отримує оновлену дошку;
 stop;
+
 @enduml
 
 </center>
+
 <table>
     <tr>
         <th>ID</th>
@@ -1578,6 +1450,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -1586,6 +1459,7 @@ stop;
 >
 
 @startuml
+
 |Користувач (керівник проєкту)|
 start;
 : Відкриває дошку;
@@ -1603,10 +1477,10 @@ end note
 |Користувач|
 : Отримує підтвердження про видалення;
 stop;
+
 @enduml
 
 </center>
-
 
 <table>
     <tr>
@@ -1659,7 +1533,15 @@ stop;
     </tr>
 </table>
 
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
 @startuml
+
 |Адміністратор|
 start;
 : Вибирає користувача зі списку;
@@ -1692,7 +1574,10 @@ end note
 : Отримує повідомлення про заборону;
 
 stop;
+
 @enduml
+
+</center>
 
 
 <table>
@@ -1746,7 +1631,15 @@ stop;
     </tr>
 </table>
 
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
 @startuml
+
 |Адміністратор|
 start;
 : Вибирає забороненого користувача зі списку;
@@ -1781,7 +1674,10 @@ end note
 : Отримує повідомлення про дозвіл;
 
 stop;
+
 @enduml
+
+</center>
 
 
 <table>
@@ -1828,8 +1724,15 @@ stop;
     </tr>
 </table>
 
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
 
 @startuml
+
 |Адміністратор|
 start;
 : Відкриває питання користувача у службі підтримки;
@@ -1855,4 +1758,7 @@ end note
 : Отримує повідомлення з відповіддю;
 
 stop;
+
 @enduml
+
+</center>
