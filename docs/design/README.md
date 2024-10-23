@@ -48,19 +48,19 @@ Task.title --* Task
 Task.description --* Task
 Task.deadline --* Task
 Task.status --* Task
-Task "0, *" -- "1, 1" Attachment
-Task "1, 1" -- "0, *" Board
+Task "1, 1" -- "0, *" Attachment
 Task "1, 1" -- "0, *" Assignee
 
 Attachment.format --* Attachment
 Attachment.content --* Attachment
 
 Board.title --* Board
-Board "1, 1" -- "0, *" Project
+Board "1, 1" -- "0, *" Task
 
 Project.title --* Project
 Project.description --* Project
 Project "1, 1" -- "0, *" Member
+Project "1, 1" -- "0, *" Board
 
 Member "1, 1" -- "0, *" Assignee
 
