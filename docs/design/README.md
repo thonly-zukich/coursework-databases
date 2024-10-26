@@ -77,125 +77,86 @@ Tag "0, *" -- "1, 1" Task
 @startuml
 
 skinparam entity {
-    BackgroundColor #f7f711
+  BackgroundColor #f7f711
 }
 
-package UserAdministration {
-    entity User {
-        id: UUID
-        nickname: TEXT
-        email: TEXT
-        password: TEXT
-        photo: IMAGE
-        isBanned: TINYINT
-    }
-}
-
-entity Collaborator {
-    id: NUMBER
-}
-
-entity Action {
-    id: NUMBER
-    datetime: DATETIME
-}
-
-entity Project {
+package UserManagement {
+  entity User {
     id: UUID
-    name: TEXT
-    description: TEXT
+    username: TEXT
+    password: TEXT
+    email: TEXT
+    role: TEXT
+    isBanned: BOOLEAN
+  }
 }
 
-entity Team {
-    id: NUMBER
-    name: TEXT
-    motto: TEXT
+package ProjectManagement {
+  entity Project {
+    id: UUID
+    title: TEXT
+    description: TEXT
+  }
+
+  entity Board {
+    id: UUID
+    title: TEXT
+  }
+
+  entity Task {
+    id: UUID
+    title: TEXT
+    description: TEXT
+    deadline: DATETIME
+    status: TEXT
+  }
+
+  entity Attachment {
+    id: UUID
+    format: TEXT
+    content: BLOB
+  }
 }
 
 package AccessControl {
-    enum Role {
-        id: NUMBER
-        name: TEXT
-        description: TEXT
-    }
+  entity Member {
+    id: UUID
+  }
 
-    entity Permission {
-        id: NUMBER
-        action: TEXT
-    }
+  entity Assignee {
+    id: UUID
+  }
 
-    entity Grant {
-        id: UUID
-    }
+  entity Grant {
+    id: UUID
+  }
 
-    object developer
-    object teamlead
-    object administrator
+  entity Permission {
+    id: UUID
+    action: TEXT
+  }
 
-    developer .u.> Role : instanceOf
-    teamlead .u.> Role : instanceOf
-    administrator .u.> Role : instanceOf
+  entity Label {
+    id: UUID
+  }
+
+  entity Tag {
+    id: UUID
+    name: TEXT
+    description: TEXT
+  }
 }
 
-package TaskManagement {
-    entity Assignment {
-        id: NUMBER
-        datetime: DATETIME
-    }
-
-    entity Task {
-        id: NUMBER
-        name: TEXT
-        description: TEXT
-        creationDate: DATETIME
-        deadline: DATETIME
-    }
-
-    enum Tag {
-        id: NUMBER
-        name: TEXT
-        description: TEXT
-    }
-
-    entity Label {
-        id: UUID
-    }
-
-    entity Task_comment {
-        id: NUMBER
-        subject: TEXT
-        text: TEXT
-        datetime: DATETIME
-    }
-
-    entity Sprint {
-        id: NUMBER
-        name: TEXT
-        goal: TEXT
-        startdate: DATE
-        enddate: DATE
-    }
-}
-
-' Relationships
-Action "0," -r-> "0,1" Collaborator
-Action "0," -u-> "0,1" Sprint
-Action "0," -u-> "0,1" Task
-Action "0," -u-> "0,1" Assignment
-
-Collaborator "0," -d-> "1,1" User
-Team "1,1" -u-> "0," Collaborator
-Team "0," -u-> "1,1" Project
-Collaborator "0," --> "1,1" Role
-Grant "0," -r-> "1,1" Role
-Grant "0," -l-> "1,1" Permission
-Assignment "0," -d-> "1,1" Collaborator
-Assignment "0," -u-> "1,1" Task
-Label "0," -d-> "1,1" Task
-Label "0," -u-> "1,1" Tag
-Task_comment "0," -d-> "1,1" Collaborator : author
-Task_comment "0," -u-> "1,1" Task
-Task "0," -l-> "1,1" Sprint
-Sprint "0," -d-> "1,1" Project
+User "1,1" -d- "0,*" Member
+Project "1,1" -d- "0,*" Member
+Board "1,1" -d- "0,*" Task
+Project "1,1" -d- "0,*" Board
+Task "1,1" -u- "0,*" Attachment
+Task "1,1" -d- "0,*" Assignee
+Member "1,1" -d- "0,*" Assignee
+Grant "0,*" -u- "1,1" Member
+Grant "0,*" -u- "1,1" Permission
+Tag "0,*" -d- "1,1" Task
+Tag "0,*" -u- "1,1" Label
 
 @enduml
