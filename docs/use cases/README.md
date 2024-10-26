@@ -1,152 +1,5 @@
 # Модель прецедентів
 
-В цьому файлі необхідно перелічити всі документи, розроблені в проекті та дати посилання на них.
-
-*Модель прецедентів повинна містити загальні оглядові діаграми та специфікації прецедентів.*
-
-
-
-Вбудовування зображень діаграм здійснюється з використанням сервісу [plantuml.com](https://plantuml.com/). 
-
-В markdown-файлі використовується опис діаграми
-
-```md
-
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
-
-@startuml
-
-    right header
-        <font size=24 color=black>Package: <b>UCD_3.0
-    end header
-
-    title
-        <font size=18 color=black>UC_8. Редагувати конфігурацію порталу
-        <font size=16 color=black>Діаграма прецедентів
-    end title
-
-
-    actor "Користувач" as User #eeeeaa
-    
-    package UCD_1{
-        usecase "<b>UC_1</b>\nПереглянути список \nзвітів" as UC_1 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1</b>\nЗастосувати фільтр" as UC_1.1
-    usecase "<b>UC_1.2</b>\nПереглянути метадані \nзвіту" as UC_1.2  
-    usecase "<b>UC_1.2.1</b>\nДати оцінку звіту" as UC_1.2.1  
-    usecase "<b>UC_1.2.2</b>\nПереглянути інформацію \nпро авторів звіту" as UC_1.2.2
-    
-    package UCD_1 {
-        usecase "<b>UC_4</b>\nВикликати звіт" as UC_4 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1.1</b>\n Використати \nпошукові теги" as UC_1.1.1  
-    usecase "<b>UC_1.1.2</b>\n Використати \nрядок пошуку" as UC_1.1.2
-    usecase "<b>UC_1.1.3</b>\n Використати \nавторів" as UC_1.1.3  
-    
-    
-    
-    User -> UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-    UC_4 .d.> UC_1.2 :extends
-    UC_1.2 .> UC_1.2 :extends
-    UC_1.2.1 .u.> UC_1.2 :extends
-    UC_1.2.2 .u.> UC_1.2 :extends
-    UC_1 ..> UC_1.2.2 :extends
-    
-    
-    UC_1.1.1 -u-|> UC_1.1
-    UC_1.1.2 -u-|> UC_1.1
-    UC_1.1.3 -u-|> UC_1.1
-    
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2020
-    end footer
-
-@enduml
-
-**Діаграма прецедентів**
-
-</center>
-```
-
-яка буде відображена наступним чином
-
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
-
-@startuml
-
-    right header
-        <font size=24 color=black>Package: <b>UCD_3.0
-    end header
-
-    title
-        <font size=18 color=black>UC_8. Редагувати конфігурацію порталу
-        <font size=16 color=black>Діаграма прецедентів
-    end title
-
-
-    actor "Користувач" as User #eeeeaa
-    
-    package UCD_1{
-        usecase "<b>UC_1</b>\nПереглянути список \nзвітів" as UC_1 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1</b>\nЗастосувати фільтр" as UC_1.1
-    usecase "<b>UC_1.2</b>\nПереглянути метадані \nзвіту" as UC_1.2  
-    usecase "<b>UC_1.2.1</b>\nДати оцінку звіту" as UC_1.2.1  
-    usecase "<b>UC_1.2.2</b>\nПереглянути інформацію \nпро авторів звіту" as UC_1.2.2
-    
-    package UCD_1 {
-        usecase "<b>UC_4</b>\nВикликати звіт" as UC_4 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1.1</b>\n Використати \nпошукові теги" as UC_1.1.1  
-    usecase "<b>UC_1.1.2</b>\n Використати \nрядок пошуку" as UC_1.1.2
-    usecase "<b>UC_1.1.3</b>\n Використати \nавторів" as UC_1.1.3  
-    
-    
-    
-    User -> UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-    UC_4 .d.> UC_1.2 :extends
-    UC_1.2 .> UC_1.2 :extends
-    UC_1.2.1 .u.> UC_1.2 :extends
-    UC_1.2.2 .u.> UC_1.2 :extends
-    UC_1 ..> UC_1.2.2 :extends
-    
-    
-    UC_1.1.1 -u-|> UC_1.1
-    UC_1.1.2 -u-|> UC_1.1
-    UC_1.1.3 -u-|> UC_1.1
-    
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2020
-    end footer
-
-@enduml
-
-**Діаграма прецедентів**
-
-</center>
-
 
 ## Загальна схема
 
@@ -310,43 +163,6 @@ UserUnban .up.> SystemManage : extends
 
 ## Сценарії використання
 
-В діаграмі діяльності має бути алгоритм виконання сценарію використання (див. "Основний сценарій" у характеристиці бізнес-процесів)  
-
-Шаблон для таблиці:
-
-<table>
-    <tr>
-        <th>ID</th>
-        <th>
-            <code>
-            </code>
-        </th>
-    </tr>
-    <tr>
-        <th>Назва</th>
-        <td></td>
-    </tr>
-    <tr>
-        <th>Учасники</th>
-        <td></td>
-    </tr>
-    <tr>
-        <th>Передумови</th>
-        <td></td>
-    </tr>
-    <tr>
-        <th>Результат</th>
-        <td></td>
-    </tr>
-    <tr>
-        <th>Виключні ситуації</th>
-        <td></td>
-    </tr>
-</table>
-
-Модель прецедентів
-
-Сценарій використання
 
 <table>
     <tr>
@@ -402,7 +218,9 @@ UserUnban .up.> SystemManage : extends
     border: 1px solid #cfd7e6;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;">
+
 @startuml
+
 |Користувач|
 start;
 : Натискає на кнопку "Зареєструватись";
@@ -425,7 +243,9 @@ end note
 |Користувач|
 : Автоматично входить в систему;
 stop;
+
 @enduml
+
 </center>
 
 <table>
@@ -471,12 +291,15 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;">
+
 @startuml
+
 |Користувач|
 start;
 : Вводить ім'я користувача і пароль;
@@ -501,7 +324,9 @@ end note
 : Успішно входить у систему;
 
 stop;
+
 @enduml
+
 </center>
 
 
@@ -555,7 +380,9 @@ stop;
     border: 1px solid #cfd7e6;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;">
+
 @startuml
+
 |Користувач|
 start;
 : Відкриває профіль користувача;
@@ -576,7 +403,9 @@ note right #ffaaaa
 end note
 : Зберігає оновлені дані користувача;
 stop;
+
 @enduml
+
 </center>
 
 <table>
@@ -628,9 +457,8 @@ stop;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;"
 >
+
 @startuml
-
-
 
 |Адміністратор|
 start;
@@ -654,15 +482,11 @@ note right #ffaaaa
 end note
 
 stop;
+
 @enduml
+
 </center>
 
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
 <table>
     <tr>
         <th>ID</th>
@@ -700,6 +524,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -733,9 +558,7 @@ stop;
 
 @enduml
 
-
 </center>
-
 
 <table>
     <tr>
@@ -773,6 +596,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -812,6 +636,7 @@ stop;
 @enduml
 
 </center>
+
 <table>
     <tr>
         <th>ID</th>
@@ -848,6 +673,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -875,6 +701,7 @@ stop;
 @enduml
 
 </center>
+
 <table>
     <tr>
         <th>ID</th>
@@ -911,6 +738,7 @@ stop;
         </td>
     </tr>
 </table>
+
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
@@ -934,6 +762,1001 @@ end note
 :Відсортує список задач;
 
 |Користувач| 
+stop;
+
+@enduml
+
+</center>
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="WriteToSupport"><code>WriteToSupport</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Написати в службу підтримки</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Система авторизувала користувача</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система відправила повідомлення до служби підтримки</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>Користувач не ввів текст повідомлення (NullInstanceException)</td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває форму для зв'язку зі службою підтримки.</li>
+                <li>Користувач вводить текст повідомлення.</li>
+                <li>Система перевіряє введені дані (можливе NullInstanceException).</li>
+                <li>Система відправляє повідомлення до служби підтримки.</li>
+                <li>Користувач отримує підтвердження про відправлення повідомлення.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач|
+start
+:Відкриває форму для зв'язку зі службою підтримки;
+:Вводить текст повідомлення;
+
+|Система|
+:Перевіряє введені дані;
+note right #ffaaaa
+<b> Можлива виключна ситуація:
+<b> NullInstanceException - користувач не ввів текст повідомлення
+end note
+:Відправляє повідомлення до служби підтримки;
+
+|Користувач|
+:Отримує підтвердження про відправлення повідомлення;
+stop
+
+@enduml
+
+</center>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="CreateProject"><code>CreateProject</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Створити проект</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач авторизований</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система створює новий проект</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Користувач не ввів назву проекту (NullProjectNameException)</li>
+                <li>Користувач ввів неправильний формат назви (InvalidProjectNameException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач натискає "Створити проект".</li>
+                <li>Користувач заповнює необхідні поля для створення проекту.</li>
+                <li>Користувач натискає кнопку "Створити".</li>
+                <li>Система перевіряє дані.</li>
+                <li>Система створює новий проект.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач|
+start;
+: Натискає "Створити проект";
+
+: Заповнює поля проекту;
+
+: Натискає "Створити";
+
+|Система|
+: Перевіряє дані проекту;
+
+note right #ffaaaa
+<b> Можливі виключення:
+<b> NullProjectNameException
+<b> InvalidProjectNameException
+end note
+
+: Створює новий проект;
+
+stop;
+
+@enduml
+
+</center>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="EditProject"><code>EditProject</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Редагувати проект</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач є учасником проекту</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Проект успішно змінений</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Користувач не має прав на редагування проекту (InsufficientPermissionsException)</li>
+                <li>Невірний формат даних (InvalidDataFormatException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває проект для редагування.</li>
+                <li>Користувач змінює потрібні поля.</li>
+                <li>Користувач натискає "Зберегти".</li>
+                <li>Система перевіряє права доступу.</li>
+                <li>Система зберігає зміни.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач|
+start;
+: Відкриває проект для редагування;
+
+: Змінює поля проекту;
+
+: Натискає "Зберегти";
+
+|Система|
+: Перевіряє права доступу;
+
+note right #ffaaaa
+<b> Можливі виключення:
+<b> InsufficientPermissionsException
+<b> InvalidDataFormatException
+end note
+
+: Зберігає зміни проекту;
+
+stop;
+
+@enduml
+
+</center>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="DeleteProject"><code>DeleteProject</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Видалити проект</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Користувач має права на видалення проекту</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система видаляє проект</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Користувач не має прав на видалення проекту (InsufficientPermissionsException)</li>
+                <li>Проект не знайдено (ProjectNotFoundException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває проект для видалення.</li>
+                <li>Користувач натискає "Видалити".</li>
+                <li>Система перевіряє права користувача.</li>
+                <li>Система видаляє проект.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач|
+start;
+: Відкриває проект для видалення;
+
+: Натискає "Видалити";
+
+|Система|
+: Перевіряє права користувача;
+
+note right #ffaaaa
+<b> Можливі виключення:
+<b> InsufficientPermissionsException
+<b> ProjectNotFoundException
+end note
+
+: Видаляє проект;
+
+stop;
+
+@enduml
+
+</center>
+
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="AddMemberToProject"><code>AddMemberToProject</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Додати учасника до проекту</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на редагування проекту</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система додає учасника до проєкту</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла користувача (UserNotFoundException)</li>
+                <li>Система не знайшла проєкт (ProjectNotFoundException)</li>
+                <li>Користувач має недостатньо прав для додавання учасника (AccessDeniedException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває проект.</li>
+                <li>Користувач натискає кнопку "Додати учасника".</li>
+                <li>Користувач вводить дані нового учасника.</li>
+                <li>Система перевіряє права на додавання учасника.</li>
+                <li>Система додає учасника до проекту.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач (керівник проєкту)|
+start
+:Відкриває проект;
+:Натискає кнопку "Додати учасника";
+:Вводить дані нового учасника;
+
+|Система|
+:Перевіряє права на додавання учасника;
+note right #ffaaaa
+<b> Можливі виключні ситуації:
+<b> UserNotFoundException - система не знайшла користувача
+<b> ProjectNotFoundException - система не знайшла проєкт
+<b> AccessDeniedException - недостатньо прав для додавання
+end note
+:Додає учасника до проекту;
+
+|Користувач|
+:Отримує підтвердження про успішне додавання учасника;
+stop
+
+@enduml
+
+</center>
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="RemoveMemberFromProject"><code>RemoveMemberFromProject</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Видалити учасника з проекту</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на додавання учасників до проєкту</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система видаляє учасника з проєкту</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла учасника (MemberNotFoundException)</li>
+                <li>Система не знайшла проєкт (ProjectNotFoundException)</li>
+                <li>Користувач має недостатньо прав для видалення учасника (AccessDeniedException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває проект.</li>
+                <li>Користувач вибирає учасника для видалення.</li>
+                <li>Користувач натискає кнопку "Видалити".</li>
+                <li>Система перевіряє права на видалення.</li>
+                <li>Система видаляє учасника з проекту.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач (керівник проєкту)|
+start
+:Відкриває проект;
+:Вибирає учасника для видалення;
+:Натискає кнопку "Видалити";
+
+|Система|
+:Перевіряє права на видалення;
+note right #ffaaaa
+<b> Можливі виключні ситуації:
+<b> MemberNotFoundException - система не знайшла учасника
+<b> ProjectNotFoundException - система не знайшла проєкт
+<b> AccessDeniedException - недостатньо прав для видалення
+end note
+:Видаляє учасника з проекту;
+
+|Користувач|
+:Отримує підтвердження про успішне видалення учасника;
+stop
+
+@enduml
+
+</center>
+
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="CreateBoard"><code>CreateBoard</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Створити дошку</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на створення дошки</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система створює дошку</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Користувач не ввів назву дошки (NullInstanceException)</li>
+                <li>Користувач ввів недопустиму назву дошки (InvalidBoardNameException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач натискає кнопку "Створити дошку".</li>
+                <li>Користувач вводить назву дошки (можливе NullInstanceException).</li>
+                <li>Система перевіряє введені дані (можливе InvalidBoardNameException).</li>
+                <li>Система створює нову дошку.</li>
+                <li>Користувач отримує доступ до дошки.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач (керівник проєкту)|
+start;
+: Натискає кнопку "Створити дошку";
+: Вводить назву дошки;
+
+|Система|
+: Перевіряє введені дані;
+note right #ffaaaa
+<b> Можливі виключення:
+<b> NullInstanceException
+<b> InvalidBoardNameException
+end note
+: Створює нову дошку;
+
+|Користувач|
+: Отримує доступ до дошки;
+stop;
+
+@enduml
+
+</center>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="EditBoard"><code>EditBoard</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Редагувати дошку</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на редагування дошки</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система оновила дані дошки</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла дошку (BoardNotFoundException)</li>
+                <li>Користувач має недостатньо прав для редагування (AccessDeniedException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває дошку.</li>
+                <li>Користувач натискає кнопку "Редагувати".</li>
+                <li>Користувач вносить зміни.</li>
+                <li>Система перевіряє права на редагування (можливе AccessDeniedException).</li>
+                <li>Система зберігає зміни.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач (керівник проєкту)|
+start;
+: Відкриває дошку;
+: Натискає кнопку "Редагувати";
+: Вносить зміни;
+
+|Система|
+: Перевіряє права на редагування;
+note right #ffaaaa
+<b> Можливі виключення:
+<b> AccessDeniedException
+<b> BoardNotFoundException
+end note
+: Зберігає зміни;
+
+|Користувач|
+: Отримує оновлену дошку;
+stop;
+
+@enduml
+
+</center>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="DeleteBoard"><code>DeleteBoard</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Видалити дошку (Delete Board)</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Користувач (керівник проєкту), адміністратор, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Користувач має права на видалення дошки</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система видаляє дошку</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла дошку (BoardNotFoundException)</li>
+                <li>Користувач має недостатньо прав для видалення (AccessDeniedException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Користувач відкриває дошку.</li>
+                <li>Користувач натискає кнопку "Видалити".</li>
+                <li>Система перевіряє права на видалення (можливе AccessDeniedException).</li>
+                <li>Система видаляє дошку.</li>
+                <li>Користувач отримує підтвердження про успішне видалення.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Користувач (керівник проєкту)|
+start;
+: Відкриває дошку;
+: Натискає кнопку "Видалити";
+
+|Система|
+: Перевіряє права на видалення;
+note right #ffaaaa
+<b> Можливі виключення:
+<b> AccessDeniedException
+<b> BoardNotFoundException
+end note
+: Видаляє дошку;
+
+|Користувач|
+: Отримує підтвердження про видалення;
+stop;
+
+@enduml
+
+</center>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="BanUser"><code>BanUser</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Заборонити користувача</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Адміністратор, користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала адміністратора</li>
+                <li>Система не заборонила користувача</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система забороняє доступ користувачу</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла користувача (UserNotFoundException)</li>
+                <li>Адміністратор має недостатньо прав для заборони (InsufficientPermissionsException)</li>
+                <li>Система вже заборонила користувача (UserBannedException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Адміністратор вибирає користувача зі списку.</li>
+                <li>Адміністратор натискає кнопку "Заборонити користувача".</li>
+                <li>Система перевіряє права адміністратора (можливе InsufficientPermissionsException).</li>
+                <li>Система перевіряє користувача на заборону (можливе UserBannedException).</li>
+                <li>Система забороняє користувача (можливе UserNotFoundException).</li>
+                <li>Користувач отримує повідомлення про заборону.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Адміністратор|
+start;
+: Вибирає користувача зі списку;
+
+: Натискає "Заборонити користувача";
+
+|Система|
+: Перевіряє права адміністратора;
+
+note right #ffaaaa
+<b> Можливе виключення:
+<b> InsufficientPermissionsException
+end note
+
+: Перевіряє, чи користувач вже заборонений;
+
+note right #ffaaaa
+<b> Можливе виключення:
+<b> UserBannedException
+end note
+
+: Забороняє користувача;
+
+note right #ffaaaa
+<b> Можливе виключення:
+<b> UserNotFoundException
+end note
+
+|Користувач|
+: Отримує повідомлення про заборону;
+
+stop;
+
+@enduml
+
+</center>
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="UnbanUser"><code>UnbanUser</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Дозволити користувача</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Адміністратор, користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>
+            <ul>
+                <li>Система авторизувала користувача</li>
+                <li>Система заборонила доступ користувачу</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система дозволяє доступ користувачу</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Система не знайшла користувача (UserNotFoundException)</li>
+                <li>Адміністратор має недостатньо прав для дозволення (InsufficientPermissionsException)</li>
+                <li>Система не заборонила доступ користувачу (UserNotBannedException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Адміністратор вибирає забороненого користувача зі списку.</li>
+                <li>Адміністратор натискає кнопку "Дозволити користувача".</li>
+                <li>Система перевіряє права адміністратора (можливе InsufficientPermissionsException).</li>
+                <li>Система перевіряє користувача на заборону (можливе UserNotBannedException).</li>
+                <li>Система дозволяє користувача.</li>
+                <li>Користувач отримує повідомлення про дозвіл.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Адміністратор|
+start;
+: Вибирає забороненого користувача зі списку;
+
+: Натискає "Дозволити користувача";
+
+|Система|
+: Перевіряє права адміністратора;
+
+note right #ffaaaa
+<b> Можливе виключення:
+<b> InsufficientPermissionsException
+end note
+
+: Перевіряє, чи користувач заборонений;
+
+
+
+note right #ffaaaa
+<b> Можливе виключення:
+<b> UserNotBannedException
+end note
+
+: Дозволяє користувача;
+
+note right #ffaaaa
+<b> Можливе виключення:
+<b> UserNotFoundException
+end note
+
+|Користувач|
+: Отримує повідомлення про дозвіл;
+
+stop;
+
+@enduml
+
+</center>
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th id="SupportAnswer"><code>SupportAnswer</code></th>
+    </tr>
+    <tr>
+        <th>Назва</th>
+        <td>Відповісти у технічній підтримці</td>
+    </tr>
+    <tr>
+        <th>Учасники</th>
+        <td>Адміністратор, користувач, система</td>
+    </tr>
+    <tr>
+        <th>Передумови</th>
+        <td>Система авторизувала адміністратора</td>
+    </tr>
+    <tr>
+        <th>Результат</th>
+        <td>Система відправляє відповідь користувачу</td>
+    </tr>
+    <tr>
+        <th>Виключні ситуації</th>
+        <td>
+            <ul>
+                <li>Адміністратор не ввів текст відповіді (NullAnswerException)</li>
+                <li>Користувача не знайдено (UserNotFoundException)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>Основний сценарій</th>
+        <td>
+            <ol>
+                <li>Адміністратор відкриває питання користувача у службі підтримки.</li>
+                <li>Адміністратор вводить текст відповіді.</li>
+                <li>Система перевіряє введені дані (можливе NullAnswerException).</li>
+                <li>Система відправляє відповідь користувачу (можливе UserNotFoundException).</li>
+                <li>Користувач отримує повідомлення з відповіддю.</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+>
+
+@startuml
+
+|Адміністратор|
+start;
+: Відкриває питання користувача у службі підтримки;
+
+: Вводить текст відповіді;
+
+|Система|
+: Перевіряє текст відповіді;
+
+note right #ffaaaa
+<b> Можливе виключення:
+<b> NullAnswerException
+end note
+
+: Відправляє відповідь користувачу;
+
+note right #ffaaaa
+<b> Можливе виключення:
+<b> UserNotFoundException
+end note
+
+|Користувач|
+: Отримує повідомлення з відповіддю;
+
 stop;
 
 @enduml
