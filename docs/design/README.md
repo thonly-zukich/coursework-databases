@@ -160,3 +160,7 @@ Tag "0,*" -d- "1,1" Task
 Tag "0,*" -u- "1,1" Label
 
 @enduml
+
+## Реляційна модель
+
+![photo_2024-10-27_14-54-37](https://github.com/user-attachments/assets/f438d166-6003-4423-b74d-bd36f83741be)
