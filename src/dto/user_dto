@@ -1,0 +1,5 @@
+# DTO для користувача (Data Transfer Object)
+class UserDTO:
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
