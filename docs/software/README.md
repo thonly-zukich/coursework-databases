@@ -7,6 +7,7 @@
 CREATE SCHEMA IF NOT EXISTS ProjectManagement;
 USE ProjectManagement;
 
+-- Створення таблиць
 CREATE TABLE IF NOT EXISTS Project (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
@@ -90,62 +91,79 @@ CREATE TABLE IF NOT EXISTS AccessGrant (
     FOREIGN KEY (permission_id) REFERENCES Permission(id) ON DELETE CASCADE
 );
 
+-- Очищення таблиць
+DELETE FROM AccessGrant;
+DELETE FROM Assignee;
+DELETE FROM Member;
+DELETE FROM User;
+DELETE FROM Tag;
+DELETE FROM Label;
+DELETE FROM Attachment;
+DELETE FROM Task;
+DELETE FROM Board;
+DELETE FROM Project;
+DELETE FROM Permission;
 
-INSERT INTO Project (title, description) VALUES
-('Project Alpha', 'Опис проекту Alpha'),
-('Project Beta', 'Опис проекту Beta');
+-- Вставка даних у Project
+INSERT INTO Project (id, title, description) VALUES
+(1, 'Project Alpha', 'Description Alpha'),
+(2, 'Project Beta', 'Description Beta');
 
-INSERT INTO Board (title, project_id) VALUES
-('Board 1', 1),
-('Board 2', 1),
-('Board 3', 2);
+-- Вставка даних у Board
+INSERT INTO Board (id, title, project_id) VALUES
+(25, 'Board 1', 1),
+(26, 'Board 2', 1),
+(27, 'Board 3', 2);
 
-INSERT INTO Task (title, description, deadline, status, board_id) VALUES
-('Task 1', 'Опис Task 1', '2024-12-31 23:59:59', 'open', 1),
-('Task 2', 'Опис Task 2', '2024-11-30 23:59:59', 'in progress', 1),
-('Task 3', 'Опис Task 3', '2024-10-15 23:59:59', 'completed', 2);
+-- Вставка даних у Task
+INSERT INTO Task (id, title, description, deadline, status, board_id) VALUES
+(1, 'Task 1', 'Description Task 1', '2024-12-31 23:59:59', 'open', 25),
+(2, 'Task 2', 'Description Task 2', '2024-11-30 23:59:59', 'in progress', 26),
+(3, 'Task 3', 'Description Task 3', '2024-10-15 23:59:59', 'completed', 27);
 
-INSERT INTO Attachment (format, content, task_id) VALUES
-('pdf', 0x1234567890ABCDEF, 1),
-('jpg', 0xABCDEF1234567890, 2),
-('docx', 0x7890ABCDEF123456, 3);
+-- Вставка даних у Label
+INSERT INTO Label (id, name, color) VALUES
+(1, 'Urgent', 'red'),
+(2, 'Review', 'blue'),
+(3, 'Low Priority', 'green');
 
-INSERT INTO Label (name, color) VALUES
-('Urgent', 'red'),
-('Review', 'blue'),
-('Low Priority', 'green');
+-- Вставка даних у Tag
+INSERT INTO Tag (id, task_id, label_id) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3);
 
-INSERT INTO Tag (task_id, label_id) VALUES
-(1, 1),
-(2, 2),
-(3, 3);
+-- Вставка даних у User
+INSERT INTO User (id, username, password, email, role, isBanned) VALUES
+(1, 'john_doe', 'password123', 'john@example.com', 'admin', 0),
+(2, 'jane_smith', 'password456', 'jane@example.com', 'member', 0),
+(3, 'alice_jones', 'password789', 'alice@example.com', 'member', 0);
 
-INSERT INTO User (username, password, email, role, isBanned) VALUES
-('john_doe', 'password123', 'john@example.com', 'admin', 0),
-('jane_smith', 'password456', 'jane@example.com', 'member', 0),
-('alice_jones', 'password789', 'alice@example.com', 'member', 0);
+-- Вставка даних у Member
+INSERT INTO Member (id, user_id, project_id) VALUES
+(1, 1, 1),
+(2, 2, 1),
+(3, 3, 2);
 
-INSERT INTO Member (user_id, project_id) VALUES
-(1, 1),
-(2, 1),
-(3, 2);
+-- Вставка даних у Assignee
+INSERT INTO Assignee (id, task_id, member_id) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3);
 
-INSERT INTO Assignee (task_id, member_id) VALUES
-(1, 1),
-(2, 2),
-(3, 3);
+-- Вставка даних у Permission
+INSERT INTO Permission (id, action) VALUES
+(1, 'view'),
+(2, 'edit'),
+(3, 'delete');
 
-INSERT INTO Permission (action) VALUES
-('view'),
-('edit'),
-('delete');
-
-INSERT INTO AccessGrant (member_id, permission_id) VALUES
-(1, 1),
-(1, 2),
-(2, 1),
-(2, 3),
-(3, 1);
+-- Вставка даних у AccessGrant
+INSERT INTO AccessGrant (id, member_id, permission_id) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 2, 1),
+(4, 2, 3),
+(5, 3, 1);
 ```
 
 
