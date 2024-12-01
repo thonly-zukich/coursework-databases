@@ -194,7 +194,7 @@ DTO дозволяють захистити вашу внутрішню бізн
 ![image](https://github.com/user-attachments/assets/b4ff8fce-ffd1-4f52-ab54-87c11332c42d)
 
 ### Головна вхідна точка для Flask додатку, конфігурація сервера і запуск API.
-```.py
+```py
 from flask import Flask, jsonify, request, abort
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.exceptions import HTTPException
@@ -325,7 +325,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 ### Контролер для обробки запитів, що стосуються користувачів (CRUD операції).
-```.py
+```py
 from flask import jsonify, request, abort
 from services.user_service import (
     get_all_users,
@@ -366,7 +366,7 @@ def delete_user(user_id):
     return jsonify({"message": "User deleted successfully"}), 200
 ```
 ### Сервіс для обробки бізнес-логіки, пов'язаної з користувачами.
-```.py
+```py
 from repositories.user_repository import (
     get_all_users_from_db,
     get_user_from_db,
@@ -391,7 +391,7 @@ def delete_user_data(user_id):
     return remove_user_from_db(user_id)
 ```
 ### Репозиторій для взаємодії з таблицею користувачів у базі даних.
-```.py
+```py
 from models.user import User
 from database.db import db
 
@@ -430,14 +430,14 @@ def remove_user_from_db(user_id):
     return False
 ```
 ### Data Transfer Object для користувача, забезпечує безпечний обмін даними між шарами додатку.
-```.py
+```py
 class UserDTO:
     def __init__(self, name, email):
         self.name = name
         self.email = email
 ```
 ### Модель SQLAlchemy для користувачів, визначає структуру таблиці користувачів у базі даних.
-```.py
+```py
 from database.db import db
 
 class User(db.Model):
@@ -449,7 +449,7 @@ class User(db.Model):
     isBanned = db.Column(db.Boolean, default=False)
 ```
 ### Маршрути API для доступу до різних функціональних частин додатку.
-```.py
+```py
 from flask import Blueprint, request, jsonify, abort
 from controllers.user_controller import get_users, create_user, get_user, update_user, delete_user
 
@@ -462,7 +462,7 @@ user_routes.route('/users/<int:user_id>', methods=['PUT'])(update_user)
 user_routes.route('/users/<int:user_id>', methods=['DELETE'])(delete_user)
 ```
 ### Конфігурація з'єднання з базою даних і ініціалізація SQLAlchemy.
-```.py
+```py
 from flask_sqlalchemy import SQLAlchemy
 
 # Ініціалізація SQLAlchemy
