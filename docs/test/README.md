@@ -34,7 +34,7 @@
 ![6 posterror](https://github.com/user-attachments/assets/7cd533bf-39aa-480d-b4fe-63b590aba041)
 
 
-## Оновлення користувача (метод PATCH)
+## Оновлення користувача з методом PATCH
 ### Успішне оновлення користувача
 
 ![7 patch1](https://github.com/user-attachments/assets/1f988549-ad0a-47d5-9005-3a87bd3bfdf3)
